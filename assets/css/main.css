@@ -1,0 +1,17 @@
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 64px;
+}
+
+.produtos {
+  padding: 0 152px;
+}
+
+.titulo__lista {
+  color: var(--preto-100, #464646);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}

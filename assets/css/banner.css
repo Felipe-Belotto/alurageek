@@ -1,0 +1,40 @@
+.section__banner {
+  width: 100%;
+  height: 352px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: url(/assets/img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.section__banner .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 32px;
+}
+
+.section__banner h1 {
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.section__banner p {
+  font-size: 22px;
+}
+
+.section__banner button {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--azul-100, #2a7ae4);
+  cursor: pointer;
+}
