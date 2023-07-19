@@ -6,6 +6,9 @@ main {
 }
 
 .produtos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   padding: 0 152px;
 }
 
