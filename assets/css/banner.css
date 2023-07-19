@@ -22,10 +22,10 @@
 }
 
 .banner__conteudo {
+  width: 90rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 1440px;
 }
 
 .section__banner h1 {

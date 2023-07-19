@@ -54,7 +54,7 @@ main {
 }
 
 .contatos .container {
-  width: 1440px;
+  width: 90rem;
   height: 240px;
   display: flex;
   justify-content: space-between;

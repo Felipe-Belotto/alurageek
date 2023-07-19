@@ -8,7 +8,7 @@ header {
 }
 
 header .container {
-  width: 1440px;
+  width: 90rem;
   height: 100%;
   display: flex;
   justify-content: space-between;
