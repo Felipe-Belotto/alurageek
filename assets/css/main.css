@@ -36,6 +36,11 @@ main {
   font-weight: 700;
 }
 
+.lista__produtos {
+  display: flex;
+  gap: 16px;
+}
+
 /* Sessão CONTATO */
 
 .contatos .container {
