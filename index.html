@@ -90,21 +90,27 @@
           <a href="#">Anuncie aqui</a>
         </div>
 
+        <form action="https://formsubmit.co/felipeeduardo817@gmail.com" method="POST" />
         <div class="contatos__email">
           <h3>Fale conosco</h3>
           <div class="nome__email">
-            <label for="nomeEmail">Nome</label>
-            <input type="text" id="nomeEmail">
-          </div>
-          <textarea name="texto-email" id="textoEmail" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
 
-          <button id="btnEnviarMensagem">Enviar mensagem</button>
+            <label for="nomeEmail">Nome</label>
+            <input type="text" id="nomeEmail" name="name">
+          </div>
+          <textarea name="message" id="textoEmail" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+          <button type="submit" id="btnEnviarMensagem">Enviar mensagem</button>
+
         </div>
+        </form>
       </div>
 
     </section>
 
   </main>
+  <script type="module" src="assets/js/main.js"></script>
 
 
 
@@ -114,9 +120,6 @@
       <p>2023</p>
     </div>
   </footer>
-
-
-
 
 </body>
 
