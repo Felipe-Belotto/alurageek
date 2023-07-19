@@ -15,3 +15,86 @@ main {
   font-style: normal;
   font-weight: 700;
 }
+
+/* Sessão CONTATO */
+
+.contatos .container {
+  height: 240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  padding: 64px 0;
+  gap: 112px;
+  background: var(--azul-10, #eaf2fd);
+}
+
+.contatos__logo {
+  display: flex;
+}
+
+.contatos__itens {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  gap: 24px;
+}
+
+.contatos__itens a {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--preto-100, #464646);
+}
+
+.contatos__email {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contatos__email h3 {
+  color: var(--preto-100, #464646);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contatos__email .nome__email {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  padding: 8px 12px 7px 12px;
+  border-radius: 4px;
+  background: var(--preto-branco, #fff);
+}
+
+.contatos__email .nome__email label {
+  color: var(--preto-50, #a2a2a2);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.contatos__email .nome__email input {
+  height: 20px;
+}
+
+.contatos__email textarea {
+  padding: 8px 0 0 12px;
+  height: 66px;
+  border-radius: 4px;
+  background: var(--preto-branco, #fff);
+  resize: none;
+}
+
+.contatos__email button {
+  width: 165px;
+  height: 50px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--azul-100, #2a7ae4);
+  color: var(--preto-branco, #fff);
+  cursor: pointer;
+}

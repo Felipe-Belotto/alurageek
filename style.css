@@ -3,6 +3,7 @@
 @import url(/assets/css/header.css);
 @import url(/assets/css/banner.css);
 @import url(/assets/css/main.css);
+@import url(/assets/css/footer.css);
 
 html {
   width: 100%;
@@ -13,6 +14,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   width: 1920px;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
