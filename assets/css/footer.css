@@ -15,10 +15,11 @@
 .direitos__autorais p a {
   font-weight: bold;
   transition: 1s;
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .direitos__autorais p a:hover {
   background-color: #2a7ae4;
+  padding: 2px;
   color: white;
 }

@@ -1,15 +1,17 @@
 main {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   flex: 1;
   gap: 64px;
 }
 
 .produtos {
+  width: 1440px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0 152px;
 }
 
 .titulo__container {
@@ -43,14 +45,22 @@ main {
 
 /* Sessão CONTATO */
 
+.contatos {
+  width: 100%;
+  background: var(--azul-10, #eaf2fd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contatos .container {
+  width: 1440px;
   height: 240px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: start;
   padding: 64px 0;
   gap: 112px;
-  background: var(--azul-10, #eaf2fd);
 }
 
 .contatos__logo {

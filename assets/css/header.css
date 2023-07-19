@@ -1,13 +1,21 @@
 header {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 50px;
-  padding: 30px;
+  padding: 32px 0;
 }
 
 header .container {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__inicio {
   display: flex;
   align-items: center;
   gap: 32px;

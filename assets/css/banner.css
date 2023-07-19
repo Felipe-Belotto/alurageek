@@ -2,22 +2,30 @@
   width: 100%;
   height: 352px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  background-image: url(/assets/img/banner.png);
+  flex-direction: column-reverse;
+  align-items: center;
+  background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8)),
+    url(/assets/img/banner.jpg);
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   color: #ffffff;
 }
 
 .section__banner .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.banner__conteudo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 16px;
-  padding: 32px;
+  width: 1440px;
 }
 
 .section__banner h1 {
@@ -30,6 +38,7 @@
 }
 
 .section__banner button {
+  width: 130px;
   display: flex;
   padding: 16px;
   justify-content: center;

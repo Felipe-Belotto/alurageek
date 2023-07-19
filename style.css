@@ -17,7 +17,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  width: 1920px;
+  min-width: 100vw;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
