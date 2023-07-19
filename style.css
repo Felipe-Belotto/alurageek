@@ -24,3 +24,13 @@ body {
   font-weight: 400;
   background-color: white;
 }
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}

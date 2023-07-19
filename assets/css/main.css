@@ -110,6 +110,10 @@ main {
   border-radius: 4px;
   background: var(--preto-branco, #fff);
   resize: none;
+  color: var(--preto-50, #a2a2a2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .contatos__email button {
