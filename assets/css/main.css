@@ -9,6 +9,23 @@ main {
   padding: 0 152px;
 }
 
+.titulo__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo__container button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--azul-100, #2a7ae4);
+  font-size: 16px;
+  font-weight: 700;
+  gap: 8px;
+  cursor: pointer;
+}
+
 .titulo__lista {
   color: var(--preto-100, #464646);
   font-size: 32px;

@@ -11,3 +11,14 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+.direitos__autorais p a {
+  font-weight: bold;
+  transition: 1s;
+  border-radius: 1px;
+}
+
+.direitos__autorais p a:hover {
+  background-color: #2a7ae4;
+  color: white;
+}
