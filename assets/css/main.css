@@ -8,7 +8,7 @@ main {
 }
 
 .produtos {
-  width: 1440px;
+  width: 90rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -94,7 +94,7 @@ main {
 }
 
 .contatos__email .nome__email {
-  width: 560px;
+  width: 35rem;
   display: flex;
   flex-direction: column;
   height: 40px;
