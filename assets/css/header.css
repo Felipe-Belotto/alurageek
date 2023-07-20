@@ -5,6 +5,7 @@ header {
   align-items: center;
   height: 50px;
   padding: 32px 0;
+  background-color: #fff;
 }
 
 header .container {

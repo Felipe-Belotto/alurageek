@@ -1,0 +1,36 @@
+.botao__login {
+  display: none;
+}
+
+.produtos__editaveis {
+  width: 90rem;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0;
+}
+
+.titulo__editaveis {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titulo__editaveis h1 {
+  color: var(--preto-100, #464646);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.titulo__editaveis button {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--azul-100, #2a7ae4);
+  color: var(--preto-branco, #fff);
+  font-weight: 400;
+  cursor: pointer;
+}

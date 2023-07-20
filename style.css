@@ -18,14 +18,19 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  background-color: white;
+  background-color: #f5f5f5;
 }
 
-input:focus {
+a,
+input,
+textarea,
+button {
   border: none;
   outline: none;
+  text-decoration: none;
 }
 
+input,
 textarea:focus {
   border: none;
   outline: none;
