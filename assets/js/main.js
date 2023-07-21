@@ -1,4 +1,4 @@
-import { exibeCard } from "./criaCard.js";
+import { exibeCard } from "./exibeCard.js";
 
 let botaoLogin = document.getElementById("btnLogin");
 

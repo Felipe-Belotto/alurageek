@@ -27,3 +27,7 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+.cardADM__botoes {
+  display: none;
+}
