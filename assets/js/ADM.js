@@ -29,3 +29,5 @@ async function exibeCardADM() {
 }
 
 exibeCardADM();
+
+export { exibeCardADM };
