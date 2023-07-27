@@ -1,0 +1,67 @@
+.botao__login {
+  display: none;
+}
+
+.addProduto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  margin: 64px;
+}
+
+.addProduto h1 {
+  width: 33.4375rem;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--preto-100, #464646);
+}
+
+.addProduto__input {
+  width: calc(33.4375rem - 24px);
+  height: calc(48px - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: #fff;
+  border-radius: 4px;
+  gap: 4px;
+  padding: 8px 12px;
+}
+
+.addProduto__input label {
+  color: var(--preto-50, #a2a2a2);
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.addProduto__input input {
+  padding: 0;
+}
+
+.addProduto textarea {
+  width: calc(33.4375rem - 24px);
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  resize: none;
+  border-radius: 4px;
+  color: var(--preto-50, #a2a2a2);
+  padding: 16px 12px 0 12px;
+}
+
+.addProduto button {
+  width: calc(33.4375rem);
+  padding: 16px;
+  background: var(--azul-100, #2a7ae4);
+  color: #fff;
+  cursor: pointer;
+}

@@ -6,7 +6,7 @@ botaologar.addEventListener("click", (event) => {
   event.preventDefault();
 
   if (inputEmail.value == "admin@email.com" && inputSenha.value == "admin") {
-    window.location.href = "/assets/html/telaADMIN.html";
+    window.location.href = "/assets/html/admin.html";
   } else {
     alert(
       " Para entrar na sessão de administrador \n Email: admin@email.com \n Senha: admin"

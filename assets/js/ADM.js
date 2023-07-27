@@ -1,6 +1,14 @@
 import { recebeAPI } from "./recebeAPI.js";
 import { criarCard } from "./criaCard.js";
 
+const botaoAdicionarProduto = document.getElementById(
+  "botao__adicionarProduto"
+);
+
+botaoAdicionarProduto.addEventListener("click", () => {
+  window.location.href = "./adicionarProduto.html";
+});
+
 async function exibeCardADM() {
   const dadosAPI = await recebeAPI();
   const listaTodosProdutos = document.getElementById("listaTodosProdutos");

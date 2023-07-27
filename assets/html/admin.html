@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AluraGeek</title>
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/css/telaADMIN.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header__inicio">
+        <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo do AluraGeek"></a>
+        <section class="barra__pesquisa">
+          <input type="text" placeholder="O que deseja encontrar?" id="inputPesquisa" class="input__Pesquisa">
+          <img src="/assets/img/lupa.svg" alt="lupa de pesquisa">
+        </section>
+      </div>
+
+
+      <button class="botao__login" id="btnLogin">Login</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="produtos__editaveis">
+      <div class="titulo__editaveis">
+        <h1>Todos Produtos</h1>
+        <Button id="botao__adicionarProduto">Adicionar Produto</Button>
+      </div>
+
+      <ul class="lista__TodosProdutos" id="listaTodosProdutos">
+      </ul>
+
+    </section>
+
+    <section class="contatos">
+      <div class="container">
+        <div class="contatos__logo"><img src="/assets/img/logo.svg" alt=""></div>
+
+        <div class="contatos__itens">
+          <a href="#">Quem somos nós</a>
+          <a href="#">Política de privacidade</a>
+          <a href="#">Programa fidelidade</a>
+          <a href="#">Nossas lojas</a>
+          <a href="#">Quero ser franqueado</a>
+          <a href="#">Anuncie aqui</a>
+        </div>
+
+        <form action="https://formsubmit.co/felipeeduardo817@gmail.com" method="POST" />
+        <div class="contatos__email">
+          <h3>Fale conosco</h3>
+          <div class="nome__email">
+
+            <label for="nomeEmail">Nome</label>
+            <input type="text" id="nomeEmail" name="name">
+          </div>
+          <textarea name="message" id="textoEmail" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+          <button type="submit" id="btnEnviarMensagem">Enviar mensagem</button>
+
+        </div>
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+  <script type="module" src="/assets/js/ADM.js"></script>
+
+
+
+  <footer>
+    <div class="direitos__autorais">
+      <p>Desenvolvido por <a href="https://www.linkedin.com/in/felipe-belotto-a34738185/" target="_blank">Felipe Belotto</a></p>
+      <p>2023</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
