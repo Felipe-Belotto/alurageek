@@ -40,9 +40,17 @@ async function exibeCardADM() {
     console.log(listaTodosProdutos.card);
 
     const botaoDeletar = card.querySelector(".botao__deletar");
+
     botaoDeletar.addEventListener("click", () => {
       const cardSelecionado = card.id;
-      deletarProduto(cardSelecionado);
+      const confirmacao = confirm(
+        "Deseja apagar o produto: " +
+          localStorage.getItem(`card${cardSelecionado}`) +
+          " ?"
+      );
+      if (confirmacao) {
+        deletarProduto(cardSelecionado);
+      }
     });
   });
 }
