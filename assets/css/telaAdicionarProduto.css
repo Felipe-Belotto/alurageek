@@ -60,6 +60,11 @@
   width: 100%;
   padding: 0;
 }
+.addProduto__input select option {
+ background-color: #fff;
+ color: var(--azul-100, #2a7ae4);
+ font-size: 16px;
+}
 
 .addProduto textarea {
   width: calc(33.4375rem - 24px);

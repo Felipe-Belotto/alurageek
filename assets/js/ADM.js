@@ -35,8 +35,6 @@ async function exibeCardADM() {
       }
     });
 
-    /* Até aqui ta tudo certo */
-    /* 
     const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
 
     botaoAlteraProduto.addEventListener("click", () => {
@@ -44,7 +42,21 @@ async function exibeCardADM() {
       console.log(cardSelecionado);
       alteraProduto(cardSelecionado);
     });
- */
+
+    /* ARRUMAR FUNÇAO */
+
+  const botaoAlterar = card.querySelector(".botao__alterar"); 
+  botaoAlterar.addEventListener("click", () => {
+  alert("botao alterar");
+  TelaAddProduto.style.display = "flex";
+  botaoAddProduto.classList.add("display-none");
+  botaoAlteraProduto.classList.remove("display-none");
+  TelaAddProduto.style.display = "flex";
+  TelaListaTodosProdutos.style.display = "none";
+}); 
+
+
+
   });
 }
 
@@ -66,7 +78,7 @@ botaoTelaADM.addEventListener("click", () => {
   TelaListaTodosProdutos.style.display = "flex";
 });
 
-botaoSectionAddProduto.addEventListener("click", () => {
+  botaoSectionAddProduto.addEventListener("click", () => {
   botaoTelaADM.classList.remove("display-none")
   botaoAlteraProduto.classList.add("display-none");
   botaoAddProduto.classList.remove("display-none");
@@ -75,15 +87,12 @@ botaoSectionAddProduto.addEventListener("click", () => {
   TelaListaTodosProdutos.style.display = "none";
 });
 
-/* const botaoAlterar = card.querySelector(".botao__alterar"); 
-botaoAlterar.addEventListener("click", () => {
-  alert("botao alterar");
-  TelaAddProduto.style.display = "flex";
-  botaoAddProduto.classList.add("display-none");
-  botaoAlteraProduto.classList.remove("display-none");
-  TelaAddProduto.style.display = "flex";
-  TelaListaTodosProdutos.style.display = "none";
-});  */
+botaoAddProduto.addEventListener("click",()=>{
+  alert("Produto adicionado")
+  enviarNovoProduto()
+})
+
+
 
 
 exibeCardADM();
