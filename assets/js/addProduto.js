@@ -15,6 +15,7 @@ const inputUrl = document.getElementById("produtoUrl");
 const inputCategoria = document.getElementById("produtoCategoria");
 const inputNome = document.getElementById("produtoNome");
 const inputPreco = document.getElementById("produtoPreco");
+const inputDescricao = document.getElementById("addDescricao");
 
 divUrl.addEventListener("click", () => {
   inputUrl.focus();
@@ -31,3 +32,25 @@ divNome.addEventListener("click", () => {
 divPreco.addEventListener("click", () => {
   inputPreco.focus();
 });
+
+async function enviarNovoProduto() {
+  fetch("https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos", {
+    method: "POST",
+    body: JSON.stringify({
+      name: inputNome.value,
+      imagem: inputUrl.value,
+      preco: inputPreco.value,
+      descricao: inputDescricao.value,
+      categoria: inputCategoria.value,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+}
+
+const botaoSubmit = document.getElementById("botaoAddProduto");
+
+botaoSubmit.addEventListener("click", enviarNovoProduto);
