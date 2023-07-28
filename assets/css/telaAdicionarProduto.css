@@ -1,15 +1,24 @@
-.botao__login {
-  display: none;
+.botao__telaADM {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--azul-100, #2a7ae4);
+  color: var(--azul-100, #2a7ae4);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .addProduto {
-  width: 100%;
+  width: 90rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 16px;
-  margin: 64px;
+  margin: 64px 0;
 }
 
 .addProduto h1 {
