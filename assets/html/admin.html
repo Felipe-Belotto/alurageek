@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/assets/css/reset.css">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/assets/css/telaADMIN.css">
+  <link rel="stylesheet" href="/assets/css/telaAdicionarProduto.css">
 </head>
 
 <body>
@@ -23,13 +24,13 @@
       </div>
 
 
-      <button class="botao__login" id="btnLogin">Login</button>
+      <button class="botao__telaADM" id="btnTelaADM">Menu administrador</button>
     </div>
   </header>
 
   <main>
 
-    <section class="produtos__editaveis">
+    <section class="produtos__editaveis" id="produtosEditaveis">
       <div class="titulo__editaveis">
         <h1>Todos Produtos</h1>
         <Button id="botao__adicionarProduto">Adicionar produto</Button>
@@ -39,6 +40,36 @@
       </ul>
 
     </section>
+
+    <section class="addProduto" id="addProduto">
+      <h1> Adicionar novo produto </h1>
+
+      <div class="addProduto__input" id="addUrl">
+        <label for="produtoUrl">URL da imagem</label>
+        <input type="text" id="produtoUrl">
+      </div>
+
+      <div class="addProduto__input" id="addCategoria">
+        <label for="addProduto__input">Categoria</label>
+        <input type="text" id="produtoCategoria">
+      </div>
+
+      <div class="addProduto__input" id="addNome">
+        <label for="produtoNome">Nome do produto</label>
+        <input type="text" id="produtoNome">
+      </div>
+
+      <div class="addProduto__input" id="addPreco">
+        <label for="produtoPreco">Preço do produto</label>
+        <input type="text" id="produtoPreco">
+      </div>
+
+      <textarea name="descricao do produto" id="addDescricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
+
+      <button type="submit" id="botaoAddProduto">Adicionar Produto</button>
+
+    </section>
+
 
     <section class="contatos">
       <div class="container">
@@ -74,6 +105,7 @@
 
   </main>
   <script type="module" src="/assets/js/ADM.js"></script>
+  <script type="module" src="/assets/js/addProduto.js"></script>
 
 
 

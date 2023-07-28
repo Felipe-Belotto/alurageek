@@ -1,13 +1,28 @@
 import { recebeAPI } from "./recebeAPI.js";
 import { criarCard } from "./criaCard.js";
 
-const botaoAdicionarProduto = document.getElementById(
-  "botao__adicionarProduto"
-);
+function alternaTela() {
+  const TelaListaTodosProdutos = document.getElementById("produtosEditaveis");
+  const TelaAddProduto = document.getElementById("addProduto");
 
-botaoAdicionarProduto.addEventListener("click", () => {
-  window.location.href = "./adicionarProduto.html";
-});
+  const botaoTelaADM = document.getElementById("btnTelaADM");
+
+  const botaoAdicionarProduto = document.getElementById(
+    "botao__adicionarProduto"
+  );
+
+  TelaAddProduto.style.display = "none";
+
+  botaoTelaADM.addEventListener("click", () => {
+    TelaAddProduto.style.display = "none";
+    TelaListaTodosProdutos.style.display = "flex";
+  });
+
+  botaoAdicionarProduto.addEventListener("click", () => {
+    TelaAddProduto.style.display = "flex";
+    TelaListaTodosProdutos.style.display = "none";
+  });
+}
 
 async function exibeCardADM() {
   const dadosAPI = await recebeAPI();
@@ -22,6 +37,8 @@ async function exibeCardADM() {
     );
     listaTodosProdutos.appendChild(card);
 
+    console.log(listaTodosProdutos.card);
+
     const botaoDeletar = card.querySelector(".botao__deletar");
     botaoDeletar.addEventListener("click", () => {
       const cardSelecionado = card.id;
@@ -31,6 +48,7 @@ async function exibeCardADM() {
 }
 
 exibeCardADM();
+alternaTela();
 
 export { exibeCardADM };
 

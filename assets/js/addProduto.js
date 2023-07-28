@@ -1,9 +1,3 @@
-const botaoTelaADM = document.getElementById("btnTelaADM");
-
-botaoTelaADM.addEventListener("click", () => {
-  window.location.href = "./admin.html";
-});
-
 /* As divs que recebe os inputs e label */
 const divUrl = document.getElementById("addUrl");
 const divCategoria = document.getElementById("addCategoria");
