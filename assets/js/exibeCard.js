@@ -8,43 +8,26 @@ async function exibeCard() {
   const listaConsoles = document.getElementById("listaConsoles");
   const listaDiversos = document.getElementById("listaDiversos");
 
-  if (localStorage.getItem("todosProdutos") == null) {
-    dadosAPI.forEach((element) => {
-      const card = criarCard(element.imagem, element.name, element.preco);
+  dadosAPI.forEach((element) => {
+    const card = criarCard(
+      element.imagem,
+      element.name,
+      element.preco,
+      element.id
+    );
 
-      switch (element.categoria) {
-        case "Star Wars":
-          listaStarWars.appendChild(card);
-          break;
-        case "Consoles":
-          listaConsoles.appendChild(card);
-          break;
-        case "Diversos":
-          listaDiversos.appendChild(card);
-          break;
-      }
-    });
-  }
-
-  if (localStorage.getItem("todosProdutos") !== null) {
-    const todosProdutos = JSON.parse(localStorage.getItem("todosProdutos"));
-
-    todosProdutos.forEach((element) => {
-      const card = criarCard(element.imagem, element.name, element.preco);
-
-      switch (element.categoria) {
-        case "Star Wars":
-          listaStarWars.appendChild(card);
-          break;
-        case "Consoles":
-          listaConsoles.appendChild(card);
-          break;
-        case "Diversos":
-          listaDiversos.appendChild(card);
-          break;
-      }
-    });
-  }
+    switch (element.categoria) {
+      case "Star Wars":
+        listaStarWars.appendChild(card);
+        break;
+      case "Consoles":
+        listaConsoles.appendChild(card);
+        break;
+      case "Diversos":
+        listaDiversos.appendChild(card);
+        break;
+    }
+  });
 }
 
 export { exibeCard };

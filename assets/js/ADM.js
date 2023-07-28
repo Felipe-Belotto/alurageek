@@ -14,26 +14,38 @@ async function exibeCardADM() {
   const listaTodosProdutos = document.getElementById("listaTodosProdutos");
 
   dadosAPI.forEach((element) => {
-    const card = criarCard(element.imagem, element.name, element.preco);
+    const card = criarCard(
+      element.imagem,
+      element.name,
+      element.preco,
+      element.id
+    );
     listaTodosProdutos.appendChild(card);
 
     const botaoDeletar = card.querySelector(".botao__deletar");
-
     botaoDeletar.addEventListener("click", () => {
-      const cardIndex = dadosAPI.indexOf(element);
-      if (cardIndex !== -1) {
-        dadosAPI.splice(cardIndex, 1);
-
-        localStorage.setItem("todosProdutos", JSON.stringify(dadosAPI));
-
-        card.remove();
-      }
+      const cardSelecionado = card.id;
+      deletarProduto(cardSelecionado);
     });
   });
-
-  localStorage.setItem("todosProdutos", JSON.stringify(dadosAPI));
 }
 
 exibeCardADM();
 
 export { exibeCardADM };
+
+async function deletarProduto(id) {
+  const response = await fetch(
+    `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
+
+  if (response.status === 200) {
+    console.log("Requisição bem-sucedida");
+    window.location.reload();
+  } else {
+    console.log("Requisição falhou");
+  }
+}
