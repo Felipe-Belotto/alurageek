@@ -3,7 +3,7 @@ import { criarCard } from "./criaCard.js";
 import {
   enviarNovoProduto,
   deletarProduto,
-  alteraProduto,
+  alteraProduto,mostraProduto
 } from "./poderesAdm.js";
 
 async function exibeCardADM() {
@@ -17,7 +17,14 @@ async function exibeCardADM() {
       element.preco,
       element.id,
     );
+
     listaTodosProdutos.appendChild(card);
+
+    if (listaTodosProdutos.children.length <= 6) {
+      listaTodosProdutos.style.justifyContent = "start";
+    } else {
+      listaTodosProdutos.style.justifyContent = "space-between";
+    }    
 
     console.log(listaTodosProdutos.card);
 
@@ -38,9 +45,19 @@ async function exibeCardADM() {
     const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
 
     botaoAlteraProduto.addEventListener("click", () => {
-      const cardSelecionado = card.id;
-      console.log(cardSelecionado);
-      alteraProduto(cardSelecionado);
+      const nomeAnterior = localStorage.getItem(`card${card.id}`)
+      const confirmacao = confirm(`Deseja alterar o produto ${nomeAnterior} ?`)
+      if(confirmacao){
+        alteraProduto(card.id)
+        location.reload()
+        alert("Produto alterado com sucesso")
+      } else {
+        alert("Ação cancelada com sucesso")
+      }
+      
+      
+      
+
     });
 
     /* ARRUMAR FUNÇAO */
@@ -52,7 +69,9 @@ async function exibeCardADM() {
   botaoAddProduto.classList.add("display-none");
   botaoAlteraProduto.classList.remove("display-none");
   TelaAddProduto.style.display = "flex";
+  botaoTelaADM.classList.remove("display-none")
   TelaListaTodosProdutos.style.display = "none";
+  mostraProduto(card.id)
 }); 
 
 
@@ -75,6 +94,7 @@ TelaAddProduto.style.display = "none";
 botaoTelaADM.addEventListener("click", () => {
   botaoTelaADM.classList.add("display-none")
   TelaAddProduto.style.display = "none";
+  location.reload();
   TelaListaTodosProdutos.style.display = "flex";
 });
 

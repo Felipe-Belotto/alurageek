@@ -71,6 +71,8 @@ async function mostraProduto(id) {
   );
   const cadastro = await response.json();
 
+  console.log(cadastro)
+
   inputNome.value = cadastro.name;
   inputUrl.value = cadastro.imagem;
   inputPreco.value = cadastro.preco;
@@ -79,7 +81,6 @@ async function mostraProduto(id) {
 }
 
 async function alteraProduto(id) {
-  mostraProduto();
   fetch(`https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`, {
     method: "PUT",
     body: JSON.stringify({
@@ -95,4 +96,4 @@ async function alteraProduto(id) {
   });
 }
 
-export { deletarProduto, enviarNovoProduto, alteraProduto };
+export { deletarProduto, enviarNovoProduto, alteraProduto, mostraProduto};
