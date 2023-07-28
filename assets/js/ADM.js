@@ -15,7 +15,7 @@ async function exibeCardADM() {
       element.imagem,
       element.name,
       element.preco,
-      element.id
+      element.id,
     );
     listaTodosProdutos.appendChild(card);
 
@@ -35,6 +35,8 @@ async function exibeCardADM() {
       }
     });
 
+    /* Até aqui ta tudo certo */
+    /* 
     const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
 
     botaoAlteraProduto.addEventListener("click", () => {
@@ -42,40 +44,46 @@ async function exibeCardADM() {
       console.log(cardSelecionado);
       alteraProduto(cardSelecionado);
     });
-
-    const botaoSectionAddProduto = document.getElementById(
-      "botaoSectionAddProduto"
-    );
-    const TelaListaTodosProdutos = document.getElementById("produtosEditaveis");
-    const TelaAddProduto = document.getElementById("addProduto");
-    const botaoTelaADM = document.getElementById("btnTelaADM");
-    const botaoAddProduto = document.getElementById("botaoAddProduto");
-    const botaoAlterar = card.querySelector(".botao__alterar");
-
-    TelaAddProduto.style.display = "none";
-
-    botaoTelaADM.addEventListener("click", () => {
-      TelaAddProduto.style.display = "none";
-      TelaListaTodosProdutos.style.display = "flex";
-    });
-
-    botaoSectionAddProduto.addEventListener("click", () => {
-      alert("funciona");
-      botaoAlteraProduto.classList.add("display-none");
-      botaoAddProduto.classList.remove("display-none");
-      botaoAlteraProduto.classList.add("display-none");
-      TelaAddProduto.style.display = "flex";
-      TelaListaTodosProdutos.style.display = "none";
-    });
-
-    botaoAlterar.addEventListener("click", () => {
-      TelaAddProduto.style.display = "flex";
-      botaoAddProduto.classList.add("display-none");
-      botaoAlteraProduto.classList.remove("display-none");
-      TelaAddProduto.style.display = "flex";
-      TelaListaTodosProdutos.style.display = "none";
-    });
+ */
   });
 }
+
+const botaoSectionAddProduto = document.getElementById(
+  "botaoSectionAddProduto"
+);
+const TelaListaTodosProdutos = document.getElementById("produtosEditaveis");
+const TelaAddProduto = document.getElementById("addProduto");
+const botaoTelaADM = document.getElementById("btnTelaADM");
+const botaoAddProduto = document.getElementById("botaoAddProduto");
+
+const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
+
+TelaAddProduto.style.display = "none";
+
+botaoTelaADM.addEventListener("click", () => {
+  botaoTelaADM.classList.add("display-none")
+  TelaAddProduto.style.display = "none";
+  TelaListaTodosProdutos.style.display = "flex";
+});
+
+botaoSectionAddProduto.addEventListener("click", () => {
+  botaoTelaADM.classList.remove("display-none")
+  botaoAlteraProduto.classList.add("display-none");
+  botaoAddProduto.classList.remove("display-none");
+  botaoAlteraProduto.classList.add("display-none");
+  TelaAddProduto.style.display = "flex";
+  TelaListaTodosProdutos.style.display = "none";
+});
+
+/* const botaoAlterar = card.querySelector(".botao__alterar"); 
+botaoAlterar.addEventListener("click", () => {
+  alert("botao alterar");
+  TelaAddProduto.style.display = "flex";
+  botaoAddProduto.classList.add("display-none");
+  botaoAlteraProduto.classList.remove("display-none");
+  TelaAddProduto.style.display = "flex";
+  TelaListaTodosProdutos.style.display = "none";
+});  */
+
 
 exibeCardADM();
