@@ -40,5 +40,5 @@ textarea:focus {
 }
 
 .display-none {
-  display: none !important;
+  display: none;
 }

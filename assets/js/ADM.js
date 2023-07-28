@@ -60,6 +60,7 @@ async function exibeCardADM() {
     });
 
     botaoSectionAddProduto.addEventListener("click", () => {
+      alert("funciona");
       botaoAlteraProduto.classList.add("display-none");
       botaoAddProduto.classList.remove("display-none");
       botaoAlteraProduto.classList.add("display-none");
@@ -68,6 +69,7 @@ async function exibeCardADM() {
     });
 
     botaoAlterar.addEventListener("click", () => {
+      TelaAddProduto.style.display = "flex";
       botaoAddProduto.classList.add("display-none");
       botaoAlteraProduto.classList.remove("display-none");
       TelaAddProduto.style.display = "flex";
