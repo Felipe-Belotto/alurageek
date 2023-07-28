@@ -1,7 +1,10 @@
 import { recebeAPI } from "./recebeAPI.js";
 import { criarCard } from "./criaCard.js";
-
-const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
+import {
+  enviarNovoProduto,
+  deletarProduto,
+  alteraProduto,
+} from "./poderesAdm.js";
 
 async function exibeCardADM() {
   const dadosAPI = await recebeAPI();
@@ -32,14 +35,22 @@ async function exibeCardADM() {
       }
     });
 
-    const botaoAlterar = card.querySelector(".botao__alterar");
-    const TelaListaTodosProdutos = document.getElementById("produtosEditaveis");
-    const TelaAddProduto = document.getElementById("addProduto");
-    const botaoTelaADM = document.getElementById("btnTelaADM");
+    const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
+
+    botaoAlteraProduto.addEventListener("click", () => {
+      const cardSelecionado = card.id;
+      console.log(cardSelecionado);
+      alteraProduto(cardSelecionado);
+    });
+
     const botaoSectionAddProduto = document.getElementById(
       "botaoSectionAddProduto"
     );
+    const TelaListaTodosProdutos = document.getElementById("produtosEditaveis");
+    const TelaAddProduto = document.getElementById("addProduto");
+    const botaoTelaADM = document.getElementById("btnTelaADM");
     const botaoAddProduto = document.getElementById("botaoAddProduto");
+    const botaoAlterar = card.querySelector(".botao__alterar");
 
     TelaAddProduto.style.display = "none";
 
@@ -49,6 +60,7 @@ async function exibeCardADM() {
     });
 
     botaoSectionAddProduto.addEventListener("click", () => {
+      alert("funciona");
       botaoAlteraProduto.classList.add("display-none");
       botaoAddProduto.classList.remove("display-none");
       botaoAlteraProduto.classList.add("display-none");
@@ -57,6 +69,7 @@ async function exibeCardADM() {
     });
 
     botaoAlterar.addEventListener("click", () => {
+      TelaAddProduto.style.display = "flex";
       botaoAddProduto.classList.add("display-none");
       botaoAlteraProduto.classList.remove("display-none");
       TelaAddProduto.style.display = "flex";
@@ -66,26 +79,3 @@ async function exibeCardADM() {
 }
 
 exibeCardADM();
-alternaTela();
-
-export { exibeCardADM };
-
-async function deletarProduto(id) {
-  const response = await fetch(
-    `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`,
-    {
-      method: "DELETE",
-    }
-  );
-
-  if (response.status === 200) {
-    console.log(
-      "O item " + localStorage.getItem(`card${id}`) + " foi apagado com SUCESSO"
-    );
-    window.location.reload();
-  } else {
-    console.log(
-      "Não foi possivel apagar o item " + localStorage.getItem(`card${id}`)
-    );
-  }
-}
