@@ -6,7 +6,7 @@ function criarCard(imagem, nome, preco, id) {
   card.innerHTML = `
     <div class="cardADM__botoes">
       <button class="botao__deletar"><img src="/assets/img/botaoDeletar.svg" alt="botao deletar"></button>
-      <button class="botao__modificar"><img src="/assets/img/botaoModificar.svg" alt="botao modificar"></button>
+      <button class="botao__alterar"><img src="/assets/img/botaoModificar.svg" alt="botao alterar"></button>
     </div>
     <img class="card__imagem" src="${imagem}" alt="">
     <p class="card__nome">${nome}</p>

@@ -56,6 +56,11 @@
   padding: 0;
 }
 
+.addProduto__input select {
+  width: 100%;
+  padding: 0;
+}
+
 .addProduto textarea {
   width: calc(33.4375rem - 24px);
   height: 66px;

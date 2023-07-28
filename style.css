@@ -24,15 +24,21 @@ body {
 
 a,
 input,
+select,
 textarea,
 button {
   border: none;
   outline: none;
   text-decoration: none;
+  appearance: none;
 }
 
 input,
 textarea:focus {
   border: none;
   outline: none;
+}
+
+.display-none {
+  display: none;
 }

@@ -33,7 +33,7 @@
     <section class="produtos__editaveis" id="produtosEditaveis">
       <div class="titulo__editaveis">
         <h1>Todos Produtos</h1>
-        <Button id="botao__adicionarProduto">Adicionar produto</Button>
+        <Button id="botaoSectionAddProduto">Adicionar produto</Button>
       </div>
 
       <ul class="lista__TodosProdutos" id="listaTodosProdutos">
@@ -41,7 +41,7 @@
 
     </section>
 
-    <section class="addProduto" id="addProduto">
+    <section class="addProduto display-none" id="addProduto">
       <h1> Adicionar novo produto </h1>
 
       <div class="addProduto__input" id="addUrl">
@@ -50,13 +50,18 @@
       </div>
 
       <div class="addProduto__input" id="addCategoria">
-        <label for="addProduto__input">Categoria</label>
-        <input type="text" id="produtoCategoria">
+        <label for="produtoCategoria">Categoria</label>
+        <select id="produtoCategoria">
+          <option value=""></option>
+          <option value="Star Wars">Star Wars</option>
+          <option value="Consoles">Consoles</option>
+          <option value="Diversos">Diversos</option>
+        </select>
       </div>
 
       <div class="addProduto__input" id="addNome">
         <label for="produtoNome">Nome do produto</label>
-        <input type="text" id="produtoNome">
+        <input type="text" id="produtoNome" maxlength="22">
       </div>
 
       <div class="addProduto__input" id="addPreco">
@@ -66,7 +71,8 @@
 
       <textarea name="descricao do produto" id="addDescricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
 
-      <button type="submit" id="botaoAddProduto">Adicionar Produto</button>
+      <button class="display-none" type="submit" id="botaoAddProduto">Adicionar Produto</button>
+      <button class="display-none" type="submit" id="botaoAlteraProduto">Alterar Produto</button>
 
     </section>
 
