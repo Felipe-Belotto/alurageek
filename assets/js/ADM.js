@@ -26,8 +26,6 @@ async function exibeCardADM() {
       listaTodosProdutos.style.justifyContent = "space-between";
     }    
 
-    console.log(listaTodosProdutos.card);
-
     const botaoDeletar = card.querySelector(".botao__deletar");
 
     botaoDeletar.addEventListener("click", () => {
@@ -38,33 +36,16 @@ async function exibeCardADM() {
           " ?"
       );
       if (confirmacao) {
-        deletarProduto(cardSelecionado);
+        deletarProduto(card.id);
       }
     });
 
-    const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
-
-    botaoAlteraProduto.addEventListener("click", () => {
-      const nomeAnterior = localStorage.getItem(`card${card.id}`)
-      const confirmacao = confirm(`Deseja alterar o produto ${nomeAnterior} ?`)
-      if(confirmacao){
-        alteraProduto(card.id)
-        location.reload()
-        alert("Produto alterado com sucesso")
-      } else {
-        alert("Ação cancelada com sucesso")
-      }
-      
-      
-      
-
-    });
 
     /* ARRUMAR FUNÇAO */
 
   const botaoAlterar = card.querySelector(".botao__alterar"); 
+  const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
   botaoAlterar.addEventListener("click", () => {
-  alert("botao alterar");
   TelaAddProduto.style.display = "flex";
   botaoAddProduto.classList.add("display-none");
   botaoAlteraProduto.classList.remove("display-none");
@@ -72,6 +53,12 @@ async function exibeCardADM() {
   botaoTelaADM.classList.remove("display-none")
   TelaListaTodosProdutos.style.display = "none";
   mostraProduto(card.id)
+ 
+
+    botaoAlteraProduto.addEventListener("click", () => {
+      console.log(card.id)
+      alteraProduto(card.id)
+    });
 }); 
 
 

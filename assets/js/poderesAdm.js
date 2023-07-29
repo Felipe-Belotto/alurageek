@@ -81,7 +81,7 @@ async function mostraProduto(id) {
 }
 
 async function alteraProduto(id) {
-  fetch(`https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`, {
+ await fetch(`https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`, {
     method: "PUT",
     body: JSON.stringify({
       name: inputNome.value,
