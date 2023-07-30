@@ -10,7 +10,8 @@ function criarCard(imagem, nome, preco, id) {
     </div>
     <img class="card__imagem" src="${imagem}" alt="">
     <p class="card__nome">${nome}</p>
-    <p class="card__preco"> R$ ${preco}</p>
+    <p class="card__preco-antigo"> <span>R$ ${preco}</span> 33% </p>
+    <p class="card__preco"> R$ ${preco-(preco * 0.3)}</p>
     <button class="card__botao">Ver produto</button>
   `;
 
