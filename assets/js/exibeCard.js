@@ -16,6 +16,18 @@ async function exibeCard() {
       element.id
     );
 
+    const botaoVerTudo = card.querySelector(".card__botao");
+    botaoVerTudo.addEventListener("click", ()=> {
+      const startScreen = document.getElementById("startScreen")
+      startScreen.style.display="none"
+      
+    })
+
+    async function recebeCardSelecionado (id){
+      const response = await fetch(
+        `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`)
+    }
+
     switch (element.categoria) {
       case "Star Wars":
         listaStarWars.appendChild(card);
@@ -29,5 +41,7 @@ async function exibeCard() {
     }
   });
 }
+
+
 
 export { exibeCard };

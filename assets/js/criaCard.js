@@ -12,10 +12,9 @@ function criarCard(imagem, nome, preco, id) {
     <p class="card__nome">${nome}</p>
     <p class="card__preco-antigo"> <span>R$ ${preco}</span> 33% </p>
     <p class="card__preco"> R$ ${preco-(preco * 0.3)}</p>
-    <button class="card__botao">Ver produto</button>
+    <button class="card__botao" onclick="">Ver produto</button>
   `;
 
   return card;
 }
-
 export { criarCard };

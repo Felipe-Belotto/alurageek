@@ -60,9 +60,6 @@ async function exibeCardADM() {
       alteraProduto(card.id)
     });
 }); 
-
-
-
   });
 }
 
