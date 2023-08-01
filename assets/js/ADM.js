@@ -3,7 +3,8 @@ import { criarCard } from "./criaCard.js";
 import {
   enviarNovoProduto,
   deletarProduto,
-  alteraProduto,mostraProduto
+  alteraProduto,
+  mostraProduto,
 } from "./poderesAdm.js";
 
 async function exibeCardADM() {
@@ -15,7 +16,7 @@ async function exibeCardADM() {
       element.imagem,
       element.name,
       element.preco,
-      element.id,
+      element.id
     );
 
     listaTodosProdutos.appendChild(card);
@@ -24,7 +25,7 @@ async function exibeCardADM() {
       listaTodosProdutos.style.justifyContent = "start";
     } else {
       listaTodosProdutos.style.justifyContent = "space-between";
-    }    
+    }
 
     const botaoDeletar = card.querySelector(".botao__deletar");
 
@@ -40,25 +41,23 @@ async function exibeCardADM() {
       }
     });
 
-
     /* ARRUMAR FUNÇAO */
 
-  const botaoAlterar = card.querySelector(".botao__alterar"); 
-  const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
-  botaoAlterar.addEventListener("click", () => {
-  TelaAddProduto.style.display = "flex";
-  botaoAddProduto.classList.add("display-none");
-  botaoAlteraProduto.classList.remove("display-none");
-  TelaAddProduto.style.display = "flex";
-  botaoTelaADM.classList.remove("display-none")
-  TelaListaTodosProdutos.style.display = "none";
-  mostraProduto(card.id)
- 
+    const botaoAlterar = card.querySelector(".botao__alterar");
+    const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
+    botaoAlterar.addEventListener("click", () => {
+      TelaAddProduto.style.display = "flex";
+      botaoAddProduto.classList.add("display-none");
+      botaoAlteraProduto.classList.remove("display-none");
+      TelaAddProduto.style.display = "flex";
+      botaoTelaADM.classList.remove("display-none");
+      TelaListaTodosProdutos.style.display = "none";
+      mostraProduto(card.id);
 
-    botaoAlteraProduto.addEventListener("click", () => {
-      alteraProduto(card.id)
+      botaoAlteraProduto.addEventListener("click", () => {
+        alteraProduto(card.id);
+      });
     });
-}); 
   });
 }
 
@@ -75,14 +74,14 @@ const botaoAlteraProduto = document.getElementById("botaoAlteraProduto");
 TelaAddProduto.style.display = "none";
 
 botaoTelaADM.addEventListener("click", () => {
-  botaoTelaADM.classList.add("display-none")
+  botaoTelaADM.classList.add("display-none");
   TelaAddProduto.style.display = "none";
   location.reload();
   TelaListaTodosProdutos.style.display = "flex";
 });
 
-  botaoSectionAddProduto.addEventListener("click", () => {
-  botaoTelaADM.classList.remove("display-none")
+botaoSectionAddProduto.addEventListener("click", () => {
+  botaoTelaADM.classList.remove("display-none");
   botaoAlteraProduto.classList.add("display-none");
   botaoAddProduto.classList.remove("display-none");
   botaoAlteraProduto.classList.add("display-none");
@@ -90,12 +89,9 @@ botaoTelaADM.addEventListener("click", () => {
   TelaListaTodosProdutos.style.display = "none";
 });
 
-botaoAddProduto.addEventListener("click",()=>{
-  alert("Produto adicionado")
-  enviarNovoProduto()
-})
-
-
-
+botaoAddProduto.addEventListener("click", () => {
+  alert("Produto adicionado");
+  enviarNovoProduto();
+});
 
 exibeCardADM();
