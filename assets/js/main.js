@@ -56,4 +56,24 @@ const verProdutoContainer = document.getElementById("verProdutoContainer");
 
 verProdutoContainer.style.display = "none";
 
+const btnVerTudoConsoles = document.getElementById("btnVerConsoles");
+
+btnVerTudoConsoles.addEventListener("click", () => {
+  const sectionConsoles = document.querySelector(".section__consoles");
+  window.scrollTo({
+    top: (sectionConsoles.offsetTop * 2) / 3,
+    behavior: "smooth",
+    center: true,
+  });
+
+  const tituloConsoles = document.getElementById("tituloConsoles"); // Replace "tituloConsoles" with the actual ID of your element.
+
+  const oldColor = tituloConsoles.style.color;
+  tituloConsoles.style.color = "#2a7ae4";
+
+  setTimeout(() => {
+    tituloConsoles.style.color = oldColor;
+  }, 1000);
+});
+
 exibeCard();
