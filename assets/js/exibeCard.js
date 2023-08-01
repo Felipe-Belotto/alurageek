@@ -1,28 +1,6 @@
 import { recebeAPI } from "./recebeAPI.js";
 import { criarCard, criarCardSelecionado } from "./criaCard.js";
 
-async function recebeCardSelecionado(id) {
-  const response = await fetch(
-    `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`
-  );
-  const conexao = await response.json();
-  console.log(conexao);
-
-  const cardSelecionado = criarCardSelecionado(
-    conexao.imagem,
-    conexao.name,
-    conexao.preco,
-    conexao.descricao,
-    conexao.id
-  );
-  localStorage.setItem("cardSelecionadoCategoria", conexao.categoria);
-  console.log(localStorage.getItem("cardSelecionadoCategoria"));
-  localStorage.setItem("cardSelecionadoId", conexao.id);
-  console.log(localStorage.getItem("cardSelecionadoId"));
-  const listaCardSelecionado = document.getElementById("listaCardSelecionado");
-  listaCardSelecionado.appendChild(cardSelecionado);
-}
-
 async function exibeCard() {
   const dadosAPI = await recebeAPI();
 
@@ -31,9 +9,8 @@ async function exibeCard() {
       "cardSelecionadoCategoria"
     );
     const cardSelecionadoId = localStorage.getItem("cardSelecionadoId");
-    console.log(cardSelecionadoId);
 
-    for (const element of dadosAPI) {
+    dadosAPI.forEach((element) => {
       if (
         element.categoria === cardSelecionadoCategoria &&
         element.id !== cardSelecionadoId
@@ -49,7 +26,34 @@ async function exibeCard() {
           document.getElementById("listaCardSimilares");
         listaCardSimilares.appendChild(card);
       }
-    }
+    });
+  }
+
+  async function recebeCardSelecionado(id) {
+    const response = await fetch(
+      `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`
+    );
+    const conexao = await response.json();
+    console.log(conexao);
+
+    const cardSelecionado = criarCardSelecionado(
+      conexao.imagem,
+      conexao.name,
+      conexao.preco,
+      conexao.descricao,
+      conexao.id
+    );
+
+    const listaCardSelecionado = document.getElementById(
+      "listaCardSelecionado"
+    );
+    listaCardSelecionado.appendChild(cardSelecionado);
+
+    localStorage.setItem("cardSelecionadoCategoria", conexao.categoria);
+
+    localStorage.setItem("cardSelecionadoId", conexao.id);
+
+    exibeCardSimilares();
   }
 
   const listaStarWars = document.getElementById("listaStarWars");
@@ -78,14 +82,11 @@ async function exibeCard() {
 
     const botaoVerTudo = card.querySelector(".card__botao");
     botaoVerTudo.addEventListener("click", () => {
-      recebeCardSelecionado(card.id);
-
       const startScreen = document.getElementById("startScreen");
       const botaoLogin = document.getElementById("btnLogin");
       startScreen.style.display = "none";
       botaoLogin.style.display = "none";
-
-      exibeCardSimilares();
+      recebeCardSelecionado(card.id);
     });
   }
 }
