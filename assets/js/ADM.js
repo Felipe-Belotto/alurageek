@@ -21,12 +21,6 @@ async function exibeCardADM() {
 
     listaTodosProdutos.appendChild(card);
 
-    if (listaTodosProdutos.children.length <= 6) {
-      listaTodosProdutos.style.justifyContent = "start";
-    } else {
-      listaTodosProdutos.style.justifyContent = "space-between";
-    }
-
     const botaoDeletar = card.querySelector(".botao__deletar");
 
     botaoDeletar.addEventListener("click", () => {
