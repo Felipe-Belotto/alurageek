@@ -56,7 +56,6 @@ async function exibeCardADM() {
  
 
     botaoAlteraProduto.addEventListener("click", () => {
-      console.log(card.id)
       alteraProduto(card.id)
     });
 }); 

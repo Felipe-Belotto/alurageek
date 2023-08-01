@@ -1,5 +1,5 @@
 import { recebeAPI } from "./recebeAPI.js";
-import { criarCard } from "./criaCard.js";
+import { criarCard, criarCardSelecionado } from "./criaCard.js";
 
 async function exibeCard() {
   const dadosAPI = await recebeAPI();
@@ -16,16 +16,42 @@ async function exibeCard() {
       element.id
     );
 
-    const botaoVerTudo = card.querySelector(".card__botao");
-    botaoVerTudo.addEventListener("click", ()=> {
-      const startScreen = document.getElementById("startScreen")
-      startScreen.style.display="none"
-      
-    })
+    function alteraTelaCardSelecionado() {
+      recebeCardSelecionado(card.id);
+      const startScreen = document.getElementById("startScreen");
+      startScreen.style.display = "none";
 
-    async function recebeCardSelecionado (id){
-      const response = await fetch(
-        `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`)
+      exibeCardSimilares();
+    }
+
+    const botaoVerTudo = card.querySelector(".card__botao");
+    botaoVerTudo.addEventListener("click", () => {
+      alteraTelaCardSelecionado();
+    });
+
+    function exibeCardSimilares() {
+      if (
+        element.categoria == localStorage.getItem("cardSelecionadoCategoria")
+      ) {
+        dadosAPI.forEach((element) => {
+          if (
+            element.categoria ==
+            localStorage.getItem("cardSelecionadoCategoria")
+          ) {
+            const card = criarCard(
+              element.imagem,
+              element.name,
+              element.preco,
+              element.id
+            );
+
+            const listaCardSimilares =
+              document.getElementById("listaCardSimilares");
+            listaCardSimilares.appendChild(card);
+            console.log(card);
+          }
+        });
+      }
     }
 
     switch (element.categoria) {
@@ -42,6 +68,24 @@ async function exibeCard() {
   });
 }
 
+async function recebeCardSelecionado(id) {
+  const response = await fetch(
+    `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`
+  );
+  const conexao = await response.json();
+  console.log(conexao);
 
+  const cardSelecionado = criarCardSelecionado(
+    conexao.imagem,
+    conexao.name,
+    conexao.preco,
+    conexao.descricao,
+    conexao.id
+  );
+  localStorage.setItem("cardSelecionadoCategoria", conexao.categoria);
+  localStorage.setItem("cardSelecionadoCategoria", conexao.id);
+  const listaCardSelecionado = document.getElementById("listaCardSelecionado");
+  listaCardSelecionado.appendChild(cardSelecionado);
+}
 
 export { exibeCard };

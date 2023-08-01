@@ -1,4 +1,4 @@
-main{
+main {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -139,4 +139,25 @@ main{
   background: var(--azul-100, #2a7ae4);
   color: var(--preto-branco, #fff);
   cursor: pointer;
+}
+
+aside {
+  width: 90rem;
+}
+
+.produto__simulares {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.produto__simulares h1 {
+  color: var(--preto-100, #464646);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.produto__simulares ul {
+  display: flex;
+  gap: 16px;
 }
