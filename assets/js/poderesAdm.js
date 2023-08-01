@@ -1,3 +1,5 @@
+import { exibeCard } from "./exibeCard.js";
+
 /* As divs que recebe os inputs e label */
 const divUrl = document.getElementById("addUrl");
 const divCategoria = document.getElementById("addCategoria");
@@ -53,7 +55,7 @@ async function enviarNovoProduto() {
     body: JSON.stringify({
       name: inputNome.value,
       imagem: inputUrl.value,
-      preco: inputPreco.value,
+      preco: parseFloat(inputPreco.value),
       descricao: inputDescricao.value,
       categoria: inputCategoria.value,
     }),
@@ -86,7 +88,7 @@ async function alteraProduto(id) {
     body: JSON.stringify({
       name: inputNome.value,
       imagem: inputUrl.value,
-      preco: inputPreco.value,
+      preco: parseFloat(inputPreco.value),
       descricao: inputDescricao.value,
       categoria: inputCategoria.value,
     }),
