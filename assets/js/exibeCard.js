@@ -83,9 +83,13 @@ async function exibeCard() {
     const botaoVerTudo = card.querySelector(".card__botao");
     botaoVerTudo.addEventListener("click", () => {
       const startScreen = document.getElementById("startScreen");
+      const verProdutoContainer = document.getElementById(
+        "verProdutoContainer"
+      );
       const botaoLogin = document.getElementById("btnLogin");
       startScreen.style.display = "none";
       botaoLogin.style.display = "none";
+      verProdutoContainer.style.display = "block";
       recebeCardSelecionado(card.id);
     });
   }
