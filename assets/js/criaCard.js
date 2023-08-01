@@ -2,6 +2,7 @@ function criarCard(imagem, nome, preco, id) {
   const card = document.createElement("li");
   card.className = "produto__card";
   card.id = id;
+  preco = parseFloat(preco);
   localStorage.setItem(`card${id}`, nome);
   card.innerHTML = `
     <div class="cardADM__botoes">

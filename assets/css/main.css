@@ -13,6 +13,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  overflow: hidden;
 }
 
 .titulo__container {
@@ -41,8 +42,8 @@ main {
 
 .lista__produtos {
   display: flex;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: start;
+  gap: 34px;
 }
 
 /* Sessão CONTATO */
@@ -159,5 +160,6 @@ aside {
 
 .produto__simulares ul {
   display: flex;
-  gap: 16px;
+  gap: 32px;
+  overflow: hidden;
 }

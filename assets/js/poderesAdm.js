@@ -71,7 +71,7 @@ async function mostraProduto(id) {
   );
   const cadastro = await response.json();
 
-  console.log(cadastro)
+  console.log(cadastro);
 
   inputNome.value = cadastro.name;
   inputUrl.value = cadastro.imagem;
@@ -81,7 +81,7 @@ async function mostraProduto(id) {
 }
 
 async function alteraProduto(id) {
- await fetch(`https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`, {
+  await fetch(`https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`, {
     method: "PUT",
     body: JSON.stringify({
       name: inputNome.value,
@@ -96,4 +96,4 @@ async function alteraProduto(id) {
   });
 }
 
-export { deletarProduto, enviarNovoProduto, alteraProduto, mostraProduto};
+export { deletarProduto, enviarNovoProduto, alteraProduto, mostraProduto };

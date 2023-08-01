@@ -38,9 +38,9 @@
 
 .lista__TodosProdutos {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
-  gap: 64px 16px;
+  gap: 34px;
 }
 
 .cardADM__botoes {
