@@ -21,6 +21,12 @@ async function exibeCardADM() {
 
     listaTodosProdutos.appendChild(card);
 
+    const botaoVerTudo = card.querySelector(".card__botao");
+
+    botaoVerTudo.addEventListener("click", () => {
+      window.location.href = "/index.html";
+    });
+
     const botaoDeletar = card.querySelector(".botao__deletar");
 
     botaoDeletar.addEventListener("click", () => {
