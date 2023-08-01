@@ -42,6 +42,16 @@ async function exibeCard() {
     });
   }
 
+  function exclueCardAntigo() {
+    const listaCardSelecionado = document.getElementById(
+      "listaCardSelecionado"
+    );
+    listaCardSelecionado.innerHTML = "";
+
+    const listaCardSimilares = document.getElementById("listaCardSimilares");
+    listaCardSimilares.innerHTML = "";
+  }
+
   async function exibeCardSimilares() {
     const cardSelecionadoCategoria = localStorage.getItem(
       "cardSelecionadoCategoria"
@@ -53,7 +63,7 @@ async function exibeCard() {
         element.categoria === cardSelecionadoCategoria &&
         element.id !== cardSelecionadoId
       ) {
-        const card = criarCard(
+        const cardSimilar = criarCard(
           element.imagem,
           element.name,
           element.preco,
@@ -62,7 +72,14 @@ async function exibeCard() {
 
         const listaCardSimilares =
           document.getElementById("listaCardSimilares");
-        listaCardSimilares.appendChild(card);
+        listaCardSimilares.appendChild(cardSimilar);
+
+        const botaoVerTudoSimilar = cardSimilar.querySelector(".card__botao");
+
+        botaoVerTudoSimilar.addEventListener("click", () => {
+          exclueCardAntigo();
+          recebeCardSelecionado(cardSimilar.id);
+        });
       }
     });
   }
