@@ -22,6 +22,13 @@ header .container {
   gap: 32px;
 }
 
+.area__pesquisa {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Pesquisa */
+
 .barra__pesquisa {
   width: 361px;
   display: flex;
@@ -41,6 +48,19 @@ header .container {
 
 .barra__pesquisa img {
   width: 24px;
+}
+
+/* Fim Input Pesquisa */
+
+.pesquisa__resultado {
+  display: none;
+  position: absolute;
+  width: 361px;
+  min-height: 50px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: blue;
+  color: white;
 }
 
 .botao__login {
