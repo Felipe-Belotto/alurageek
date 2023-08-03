@@ -37,6 +37,7 @@ header .container {
   background-color: #f5f5f5;
   border-radius: 20px;
   padding: 8px 16px;
+  border: 1px solid #8f8f8f35;
 }
 
 .input__Pesquisa {
@@ -50,25 +51,31 @@ header .container {
   width: 24px;
 }
 
-/* Fim Input Pesquisa */
-
 .pesquisa__resultado {
   display: none;
   position: absolute;
-  width: calc(393px - 20px);
+  width: calc(413px - 20px);
   min-height: 50px;
-  margin-top: 40px;
-  padding: 10px;
+  margin-top: 42px;
   background-color: #f5f5f5;
   border-radius: 0 0 20px 20px;
+
+  border-left: 1px solid #8f8f8f35;
+  border-right: 1px solid #8f8f8f35;
+  border-bottom: 1px solid #8f8f8f35;
+
+  z-index: 1;
 }
 
-.lista__produtosPesquisados {
+.lista__produtosPesquisado {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  gap: 10px;
+  padding: 5px 10px;
 }
+
+/* Fim Input Pesquisa */
 
 .botao__login {
   width: 180px;

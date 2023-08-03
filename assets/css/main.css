@@ -105,6 +105,7 @@ main {
   padding: 8px 12px 7px 12px;
   border-radius: 4px;
   background: var(--preto-branco, #fff);
+  border-bottom: 1px solid #c8c8c8;
 }
 
 .contatos__email .nome__email label {

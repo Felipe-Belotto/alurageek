@@ -1,3 +1,5 @@
+import { pesquisa } from "./pesquisa.js";
+
 const botaologar = document.getElementById("botaoLogar");
 const inputEmail = document.getElementById("inputEmail");
 const inputSenha = document.getElementById("inputSenha");
@@ -13,3 +15,5 @@ botaologar.addEventListener("click", (event) => {
     );
   }
 });
+
+pesquisa();

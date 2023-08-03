@@ -100,32 +100,36 @@
 /* Card Pesquisado */
 
 .card__pesquisado {
+  width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #8f8f8f35;
 }
 
 .cardPesquisado__imagem {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
 }
 
 .cardPesquisado__nome {
   width: 80px;
   color: var(--preto-100, #464646);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .cardPesquisado__preco {
   width: 80px;
   color: var(--preto-100, #464646);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .cardPesquisado__botao {
+  font-size: 12px;
   width: 80px;
   color: #2a7ae4;
   font-weight: bold;

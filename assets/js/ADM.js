@@ -7,6 +7,8 @@ import {
   mostraProduto,
 } from "./poderesAdm.js";
 
+import { pesquisa } from "./pesquisa.js";
+
 async function exibeCardADM() {
   const dadosAPI = await recebeAPI();
   const listaTodosProdutos = document.getElementById("listaTodosProdutos");
@@ -94,4 +96,5 @@ botaoAddProduto.addEventListener("click", () => {
   enviarNovoProduto();
 });
 
+pesquisa();
 exibeCardADM();
