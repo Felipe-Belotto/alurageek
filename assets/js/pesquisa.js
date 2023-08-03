@@ -39,7 +39,7 @@ async function pesquisa() {
         }
       });
     } else {
-      pesquisaContainer.style.borderRadius = "20px 20px 0 0";
+      pesquisaContainer.style.borderRadius = "20px";
       resultadoContainer.style.display = "none";
     }
   });
