@@ -1,7 +1,9 @@
 import { recebeAPI } from "./recebeAPI.js";
+import { criarCardPesquisado } from "./criaCard.js";
 
 async function pesquisa() {
   const dadosApi = await recebeAPI();
+  const pesquisaContainer = document.getElementById("pesquisaContainer");
   const inputPesquisa = document.getElementById("inputPesquisa");
   const listaProdutosPesquisa = document.getElementById(
     "listaProdutosPesquisa"
@@ -14,7 +16,6 @@ async function pesquisa() {
   }
 
   inputPesquisa.addEventListener("input", () => {
-    const produtosParecidos = [];
     const termoPesquisado = removeAcentos(
       inputPesquisa.value.trim().toLowerCase()
     );
@@ -24,16 +25,21 @@ async function pesquisa() {
         const elementValue = removeAcentos(element.name.toLowerCase());
 
         if (elementValue.includes(termoPesquisado)) {
-          produtosParecidos.push(element);
+          const cardPesquisado = criarCardPesquisado(
+            element.imagem,
+            element.name,
+            element.preco,
+            element.id
+          );
 
-          resultadoContainer.style.display = "block";
+          pesquisaContainer.style.borderRadius = "20px 20px 0 0";
+          resultadoContainer.style.display = "flex";
 
-          listaProdutosPesquisa.innerHTML = element.name;
+          listaProdutosPesquisa.appendChild(cardPesquisado);
         }
-
-        console.log(termoPesquisado);
       });
     } else {
+      pesquisaContainer.style.borderRadius = "20px 20px 0 0";
       resultadoContainer.style.display = "none";
     }
   });

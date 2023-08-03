@@ -40,4 +40,20 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
   return cardSelecionado;
 }
 
-export { criarCard, criarCardSelecionado };
+function criarCardPesquisado(imagem, nome, preco, id) {
+  const cardPesquisado = document.createElement("li");
+  cardPesquisado.className = "card__pesquisado";
+  cardPesquisado.id = id;
+  preco = parseFloat(preco);
+  localStorage.setItem(`card${id}`, nome);
+  cardPesquisado.innerHTML = `
+    <img class="cardPesquisado__imagem" src="${imagem}" alt="">
+    <p class="cardPesquisado__nome">${nome}</p>
+    <p class="cardPesquisado__preco"> R$ ${(preco - preco * 0.3).toFixed(2)}</p>
+    <button class="cardPesquisado__botao">Ver produto</button>
+  `;
+
+  return cardPesquisado;
+}
+
+export { criarCard, criarCardSelecionado, criarCardPesquisado };

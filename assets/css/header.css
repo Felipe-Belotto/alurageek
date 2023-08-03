@@ -29,7 +29,7 @@ header .container {
 
 /* Input Pesquisa */
 
-.barra__pesquisa {
+.pesquisa__container {
   width: 361px;
   display: flex;
   height: calc(40px - 16px);
@@ -46,7 +46,7 @@ header .container {
   outline: none;
 }
 
-.barra__pesquisa img {
+.pesquisa__container img {
   width: 24px;
 }
 
@@ -55,12 +55,19 @@ header .container {
 .pesquisa__resultado {
   display: none;
   position: absolute;
-  width: 361px;
+  width: calc(393px - 20px);
   min-height: 50px;
   margin-top: 40px;
   padding: 10px;
-  background-color: blue;
-  color: white;
+  background-color: #f5f5f5;
+  border-radius: 0 0 20px 20px;
+}
+
+.lista__produtosPesquisados {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
 }
 
 .botao__login {
