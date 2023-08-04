@@ -5,10 +5,7 @@ async function pesquisa() {
   const dadosApi = await recebeAPI();
   const pesquisaContainer = document.getElementById("pesquisaContainer");
   const inputPesquisa = document.getElementById("inputPesquisa");
-  const listaProdutosPesquisa = document.getElementById(
-    "listaProdutosPesquisa"
-  );
-
+  const listaProdutosPesquisa = document.getElementById("listaProdutosPesquisa");
   const resultadoContainer = document.getElementById("resultadoPesquisa");
 
   function removeAcentos(str) {
@@ -20,27 +17,30 @@ async function pesquisa() {
       inputPesquisa.value.trim().toLowerCase()
     );
 
+    listaProdutosPesquisa.innerHTML = ""; 
+    resultadoContainer.style.display = "none"; 
+
     if (termoPesquisado !== "") {
-      dadosApi.forEach((element) => {
+      const produtosCorrespondentes = dadosApi.filter((element) => {
         const elementValue = removeAcentos(element.name.toLowerCase());
+        return elementValue.includes(termoPesquisado);
+      });
 
-        if (elementValue.includes(termoPesquisado)) {
-          const cardPesquisado = criarCardPesquisado(
-            element.imagem,
-            element.name,
-            element.preco,
-            element.id
-          );
+      pesquisaContainer.style.borderRadius = "20px 20px 0 0";
+      resultadoContainer.style.display = "flex";
 
-          pesquisaContainer.style.borderRadius = "20px 20px 0 0";
-          resultadoContainer.style.display = "flex";
+      produtosCorrespondentes.forEach((element) => {
+        const cardPesquisado = criarCardPesquisado(
+          element.imagem,
+          element.name,
+          element.preco,
+          element.id
+        );
 
-          listaProdutosPesquisa.appendChild(cardPesquisado);
-        }
+        listaProdutosPesquisa.appendChild(cardPesquisado);
       });
     } else {
       pesquisaContainer.style.borderRadius = "20px";
-      resultadoContainer.style.display = "none";
     }
   });
 }
