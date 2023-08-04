@@ -92,7 +92,7 @@ header .container {
   display: none;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:550px) {
 
   header .container {
   width: 100%;
