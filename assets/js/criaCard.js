@@ -23,7 +23,7 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
   const cardSelecionado = document.createElement("li");
   cardSelecionado.className = "cardSelecionado";
   cardSelecionado.id = id;
-  preco = parseFloat(preco.toFixed(2));
+  preco = parseFloat(preco);
   const precoComDesconto = (preco - preco * 0.3).toFixed(2);
   cardSelecionado.innerHTML = `
     <img class="cardSelecionado__imagem" src="${imagem}" alt="">

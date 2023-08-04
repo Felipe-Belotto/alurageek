@@ -42,74 +42,76 @@ async function exibeCard() {
     });
   }
 
-  function exclueCardAntigo() {
-    const listaCardSelecionado = document.getElementById(
-      "listaCardSelecionado"
-    );
-    listaCardSelecionado.innerHTML = "";
-
-    const listaCardSimilares = document.getElementById("listaCardSimilares");
-    listaCardSimilares.innerHTML = "";
-  }
-
-  async function exibeCardSimilares() {
-    const cardSelecionadoCategoria = localStorage.getItem(
-      "cardSelecionadoCategoria"
-    );
-    const cardSelecionadoId = localStorage.getItem("cardSelecionadoId");
-
-    dadosAPI.forEach((element) => {
-      if (
-        element.categoria === cardSelecionadoCategoria &&
-        element.id !== cardSelecionadoId
-      ) {
-        const cardSimilar = criarCard(
-          element.imagem,
-          element.name,
-          element.preco,
-          element.id
-        );
-
-        const listaCardSimilares =
-          document.getElementById("listaCardSimilares");
-        listaCardSimilares.appendChild(cardSimilar);
-
-        const botaoVerTudoSimilar = cardSimilar.querySelector(".card__botao");
-
-        botaoVerTudoSimilar.addEventListener("click", () => {
-          exclueCardAntigo();
-          recebeCardSelecionado(cardSimilar.id);
-        });
-      }
-    });
-  }
-
-  async function recebeCardSelecionado(id) {
-    const response = await fetch(
-      `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`
-    );
-    const conexao = await response.json();
-    console.log(conexao);
-
-    const cardSelecionado = criarCardSelecionado(
-      conexao.imagem,
-      conexao.name,
-      conexao.preco,
-      conexao.descricao,
-      conexao.id
-    );
-
-    const listaCardSelecionado = document.getElementById(
-      "listaCardSelecionado"
-    );
-    listaCardSelecionado.appendChild(cardSelecionado);
-
-    localStorage.setItem("cardSelecionadoCategoria", conexao.categoria);
-
-    localStorage.setItem("cardSelecionadoId", conexao.id);
-
-    exibeCardSimilares();
-  }
 }
 
-export { exibeCard };
+function exclueCardAntigo() {
+  const listaCardSelecionado = document.getElementById(
+    "listaCardSelecionado"
+  );
+  listaCardSelecionado.innerHTML = "";
+
+  const listaCardSimilares = document.getElementById("listaCardSimilares");
+  listaCardSimilares.innerHTML = "";
+}
+
+async function exibeCardSimilares() {
+  const dadosProdutos = await recebeAPI();
+
+  const cardSelecionadoCategoria = localStorage.getItem(
+    "cardSelecionadoCategoria"
+  );
+  const cardSelecionadoId = localStorage.getItem("cardSelecionadoId");
+
+  dadosProdutos.forEach((element) => {
+    if (
+      element.categoria === cardSelecionadoCategoria &&
+      element.id !== cardSelecionadoId
+    ) {
+      const cardSimilar = criarCard(
+        element.imagem,
+        element.name,
+        element.preco,
+        element.id
+      );
+
+      const listaCardSimilares =
+        document.getElementById("listaCardSimilares");
+      listaCardSimilares.appendChild(cardSimilar);
+
+      const botaoVerTudoSimilar = cardSimilar.querySelector(".card__botao");
+
+      botaoVerTudoSimilar.addEventListener("click", () => {
+        exclueCardAntigo();
+        recebeCardSelecionado(cardSimilar.id);
+      });
+    }
+  });
+}
+
+ async function recebeCardSelecionado(id) {
+  const response = await fetch(
+    `https://64b8785621b9aa6eb079e1c0.mockapi.io/produtos/${id}`
+  );
+  const conexao = await response.json();
+
+  const cardSelecionado = criarCardSelecionado(
+    conexao.imagem,
+    conexao.name,
+    conexao.preco,
+    conexao.descricao,
+    conexao.id
+  );
+
+  const listaCardSelecionado = document.getElementById(
+    "listaCardSelecionado"
+  );
+  listaCardSelecionado.appendChild(cardSelecionado);
+
+  localStorage.setItem("cardSelecionadoCategoria", conexao.categoria);
+
+  localStorage.setItem("cardSelecionadoId", conexao.id);
+
+  exibeCardSimilares();
+}
+
+export { exibeCard, recebeCardSelecionado, exclueCardAntigo};
