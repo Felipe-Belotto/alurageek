@@ -69,7 +69,7 @@ header .container {
 
 .lista__produtosPesquisado {
   width: 100%;
-  max-height: 350px;
+  max-height: 365px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -92,34 +92,32 @@ header .container {
   display: none;
 }
 
-@media screen and (max-width:550px) {
-
+@media screen and (max-width: 550px) {
   header .container {
-  width: 100%;
-  justify-content: space-around;
-}
+    width: 100%;
+    justify-content: space-around;
+  }
 
-.header__img {
-  width: 100px;
-  height: 28px;
-}
+  .header__img {
+    width: 100px;
+    height: 28px;
+  }
 
-.area__pesquisa {
-  display: none;
-}
+  .area__pesquisa {
+    display: none;
+  }
 
-.botao__pesquisa {
-  display: flex;
-  width: 24px;
-  height: 24px;
-}
+  .botao__pesquisa {
+    display: flex;
+    width: 24px;
+    height: 24px;
+  }
 
-.botao__pesquisa img {
-  width: 100%;
-}
+  .botao__pesquisa img {
+    width: 100%;
+  }
 
-.botao__login{
-  width: 133px;
-}
-  
+  .botao__login {
+    width: 133px;
+  }
 }
