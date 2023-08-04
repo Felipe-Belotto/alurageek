@@ -164,3 +164,33 @@ aside {
   gap: 32px;
   overflow: hidden;
 }
+
+@media screen and (max-width: 425px) {
+  .produtos {
+  width: 100%;
+}
+
+.titulo__container {
+ padding: 16px;
+}
+
+.titulo__lista {
+  color: var(--preto-100, #464646);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.titulo__container button {
+  font-size: 14px;
+}
+
+.lista__produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 16px;
+  padding: 16px;
+}
+
+}

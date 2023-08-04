@@ -135,3 +135,16 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media screen and (max-width:425px) {
+  .produto__card {
+  width: 156px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.produto__card .card__imagem {
+  height: 176px;
+}
+}

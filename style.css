@@ -43,3 +43,14 @@ textarea:focus {
 .display-none {
   display: none !important;
 }
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 14px;
+  }
+  
+  body{
+    max-width: 100vw;
+    overflow: hidden;
+  }
+}

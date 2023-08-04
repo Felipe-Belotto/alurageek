@@ -87,3 +87,39 @@ header .container {
   background-color: transparent;
   cursor: pointer;
 }
+
+.botao__pesquisa {
+  display: none;
+}
+
+@media screen and (max-width:425px) {
+
+  header .container {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.header__img {
+  width: 100px;
+  height: 28px;
+}
+
+.area__pesquisa {
+  display: none;
+}
+
+.botao__pesquisa {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.botao__pesquisa img {
+  width: 100%;
+}
+
+.botao__login{
+  width: 133px;
+}
+  
+}
