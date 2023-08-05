@@ -166,12 +166,17 @@ aside {
 }
 
 @media screen and (max-width: 550px) {
+  main {
+    gap: 0;
+  }
+  
   .produtos {
   width: 100%;
+  gap: 0;
 }
 
 .titulo__container {
- padding: 16px;
+ padding: 16px 16px 4px 16px;
 }
 
 .titulo__lista {
@@ -183,14 +188,91 @@ aside {
 
 .titulo__container button {
   font-size: 14px;
+  padding: 16px;
 }
 
 .lista__produtos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 12px;
+  padding: 0 0 10px 0;
+  height: 550px;
+}
+
+/* Contatos */
+
+.contatos {
+  width: 100%;
+  margin: 0;
+  
+}
+
+.contatos .container {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
   justify-content: start;
+  align-items: start;
+  padding: 16px 0;
   gap: 16px;
+}
+
+.contatos__logo {
+  display: flex;
+  align-self: center;
+}
+
+.contatos__itens {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 16px
+}
+
+
+.contatos form {
+  width: 100%;
+}
+
+.contatos__email {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px;
+}
+
+.contatos__email h3 {
+  align-self: flex-start;
+  color: var(--preto-100, #464646);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.contatos__email .nome__email {
+  width: 96%;
+  padding: 8px;
+}
+
+.contatos__email textarea {
+  width: 96%;
+  padding: 8px;
+}
+
+.contatos__email button {
+  align-self: flex-start;
+  width: 165px;
+  height: 50px;
   padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--azul-100, #2a7ae4);
+  color: var(--preto-branco, #fff);
+  cursor: pointer;
 }
 
 }

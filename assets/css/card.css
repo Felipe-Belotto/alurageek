@@ -138,7 +138,7 @@
 
 @media screen and (max-width:550px) {
   .produto__card {
-  width: 156px;
+  width: 166px;
   display: flex;
   flex-direction: column;
   gap: 8px;

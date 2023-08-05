@@ -28,3 +28,7 @@ footer {
   padding: 2px;
   color: white;
 }
+
+@media screen and (max-width: 550px) {
+  
+}
