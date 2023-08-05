@@ -16,11 +16,11 @@
   <header>
     <div class="container">
       <div class="header__inicio">
-        <a href="../../index.html"><img src="/assets/img/logo.svg" alt="logo do AluraGeek"></a>
+        <a href="/index.html"><img src="/assets/img/logo.svg" alt="logo do AluraGeek" class="header__img"></a>
         <nav class="area__pesquisa">
           <section class="pesquisa__container" id="pesquisaContainer">
             <input type="search" placeholder="O que deseja encontrar?" id="inputPesquisa" class="input__Pesquisa">
-            <img src="../img/lupa.svg" alt="lupa de pesquisa">
+            <img src="/assets/img/lupa.svg" alt="lupa de pesquisa">
           </section>
           <section class="pesquisa__resultado" id="resultadoPesquisa">
             <ul id="listaProdutosPesquisa" class="lista__produtosPesquisado"></ul>
@@ -29,6 +29,8 @@
       </div>
 
       <button class="botao__login" id="btnLogin">Login</button>
+
+      <button id="btnPesquisa" class="botao__pesquisa"><img src="/assets/img/lupa.svg" alt="botao de pesquisa"></button>
     </div>
   </header>
 
@@ -36,9 +38,14 @@
     <section class="tela__login">
       <form class="formulario__login" id="formularioLogin">
         <h1>Iniciar Sessão</h1>
-
-        <input type="email" placeholder="Escreva seu email" id="inputEmail">
-        <input type="password" placeholder="Escreva sua senha" id="inputSenha">
+        <div class="input__container">
+          <label for="inputEmail">Email</label>
+          <input type="email" placeholder="Escreva seu email" id="inputEmail">
+        </div>
+        <div class="input__container">
+          <label for="inputSenha">Senha</label>
+          <input type="password" placeholder="Escreva sua senha" id="inputSenha">
+        </div class="input__container">
         <button type="submit" id="botaoLogar">Entrar</button>
       </form>
     </section>
