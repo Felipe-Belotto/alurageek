@@ -103,7 +103,7 @@ header .container {
   }
 
   .header__img {
-    width: 140px;
+    width: 100%;
     height: 100%;
   }
 
@@ -117,11 +117,14 @@ header .container {
     height: 24px;
   }
 
-  .botao__pesquisa img {
-    width: 100%;
-  }
-
   .botao__login {
     width: 133px;
+    flex-shrink: 1;
+    margin: 6px;
   }
+
+  .botao__pesquisa {
+    margin: 0 12px 0 0;
+  }
+
 }
