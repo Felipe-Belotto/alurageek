@@ -72,6 +72,7 @@
 .cardSelecionado__precos {
   display: flex;
   gap: 16px;
+  font-size: 16px;
 }
 
 .cardSelecionado__preco-antigo {
@@ -79,10 +80,12 @@
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
+  font-size: 12px;
 }
 
 .cardSelecionado__preco-antigo span {
   text-decoration: line-through;
+  font-size: 14px;
 }
 
 .cardSelecionado__preco {
@@ -147,4 +150,31 @@
 .produto__card .card__imagem {
   height: 176px;
 }
+
+.cardSelecionado{
+  flex-direction: column;
+  padding: 0;
+}
+
+.cardSelecionado__imagem {
+  width: 100%;
+  height: 320px;
+}
+
+.cardSelecionado__nome {
+  color: var(--preto-100, #464646);
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0 16px;
+}
+
+.cardSelecionado__preco-antigo {
+  padding: 0 16px;
+}
+
+.cardSelecionado__descricao {
+  font-size: 14px;
+  padding: 0 16px;
+}
+
 }

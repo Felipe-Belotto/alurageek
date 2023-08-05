@@ -265,15 +265,28 @@ aside {
 
 .contatos__email button {
   align-self: flex-start;
-  width: 165px;
-  height: 50px;
-  padding: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--azul-100, #2a7ae4);
-  color: var(--preto-branco, #fff);
-  cursor: pointer;
 }
+
+aside{
+  width: 100%;
+}
+
+.produto__simulares{
+  width: 100%;
+  padding: 25px 0 25px 0 ;
+}
+
+.produto__simulares h1 {
+  font-size: 22px;
+  padding: 0 16px;
+}
+
+.produto__simulares ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 
 }
