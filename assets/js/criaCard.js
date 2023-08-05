@@ -11,8 +11,8 @@ function criarCard(imagem, nome, preco, id) {
     </div>
     <img class="card__imagem" src="${imagem}" alt="">
     <p class="card__nome">${nome}</p>
-    <p class="card__preco-antigo"> <span>R$ ${preco.toFixed(2)}</span> 33% </p>
-    <p class="card__preco"> R$ ${(preco - preco * 0.3).toFixed(2)}</p>
+    <p class="card__preco-antigo"><span>De R$ ${preco.toFixed(2)}</span></p>
+    <p class="card__preco">Por R$ ${(preco - preco * 0.3).toFixed(2)}</p>
     <button class="card__botao">Ver produto</button>
   `;
 
@@ -30,8 +30,8 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
     <div class="cardSelecionado__informacoes">
     <p class="cardSelecionado__nome">${nome}</p>
     <div class="cardSelecionado__precos">
-    <p class="cardSelecionado__preco-antigo"> <span>R$ ${preco}</span> 33% </p>
-    <p class="cardSelecionado__preco"> R$ ${precoComDesconto}</p>
+    <p class="cardSelecionado__preco-antigo"><span>De R$ ${preco}</span></p>
+    <p class="cardSelecionado__preco">Por R$ ${precoComDesconto}</p>
     </div>
     <p class="cardSelecionado__descricao">${descricao}</p>
     </div>
@@ -49,7 +49,7 @@ function criarCardPesquisado(imagem, nome, preco, id) {
   cardPesquisado.innerHTML = `
     <img class="cardPesquisado__imagem" src="${imagem}" alt="">
     <p class="cardPesquisado__nome">${nome}</p>
-    <p class="cardPesquisado__preco"> R$ ${(preco - preco * 0.3).toFixed(2)}</p>
+    <p class="cardPesquisado__preco">R$ ${(preco - preco * 0.3).toFixed(2)}</p>
     <button class="cardPesquisado__botao">Ver produto</button>
   `;
 
