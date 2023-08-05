@@ -94,6 +94,7 @@ async function exibeCardSimilares() {
   );
   const conexao = await response.json();
 
+  window.scroll(0, 0)
   const cardSelecionado = criarCardSelecionado(
     conexao.imagem,
     conexao.name,
