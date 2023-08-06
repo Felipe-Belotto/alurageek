@@ -60,3 +60,33 @@
 .cardADM__botoes button:hover {
   background-color: rgba(0, 0, 0, 0.435);
 }
+
+@media screen and (max-width: 550px) {
+
+  .produtos__editaveis {
+  width: 100%;
+  padding: 32px 0;
+}
+
+.titulo__editaveis {
+  align-items: start;
+  margin: 16px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titulo__editaveis h1 {
+  color: var(--preto-100, #464646);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.lista__TodosProdutos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+  
+}

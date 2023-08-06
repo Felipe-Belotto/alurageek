@@ -86,3 +86,65 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+
+  main{
+    overflow: hidden;
+  }
+
+  .botao__telaADM {
+  display: flex;
+  padding: 12px 16px;
+  margin: 8px;
+}
+
+  .addProduto {
+  width: 100%;
+  margin: 40px 0 50px 0;
+}
+
+.addProduto h1 {
+  width: 100%;
+  font-size: 22px;
+  margin: 0 0 0 39px;
+}
+
+.addProduto__input {
+  width: calc(100% - 64px);
+  height: calc(48px - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: #fff;
+  border-radius: 4px;
+  gap: 4px;
+  padding: 8px 12px;
+}
+
+.addProduto textarea {
+  width: calc(100% - 64px);
+  height: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  resize: none;
+  border-radius: 4px;
+  color: var(--preto-50, #a2a2a2);
+  padding: 16px 12px 0 12px;
+}
+
+
+.addProduto button {
+  width: calc(100% - 36px);
+  padding: 16px;
+  background: var(--azul-100, #2a7ae4);
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+}
