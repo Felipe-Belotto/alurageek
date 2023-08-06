@@ -1,5 +1,6 @@
 import { exibeCard } from "./exibeCard.js";
 import { pesquisa } from "./pesquisa.js";
+import { verTudoListas } from "./verTudo.js";
 
 let botaoLogin = document.getElementById("btnLogin");
 
@@ -79,3 +80,4 @@ btnVerTudoConsoles.addEventListener("click", () => {
 
 pesquisa();
 exibeCard();
+verTudoListas()
