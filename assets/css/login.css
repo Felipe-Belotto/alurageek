@@ -39,15 +39,6 @@ main {
   align-items: center;
 }
 
-.input__container label{
-  display: flex;
-  align-self: start;
-  font-size: 14px;
-  color: var(--preto-100, #464646);
-  font-weight: 500;
-  padding: 5px 0;
-}
-
 .formulario__login .input__container input {
   width: calc(100% - 24px);
   height: calc(63.1px - 24px);
@@ -56,6 +47,26 @@ main {
   font-weight: 400;
   padding:12px;
   border-radius: 4px;
+}
+
+.input__container label {
+  align-self: flex-start;
+  position: absolute;
+  font-size: 14px;
+  color: #a2a2a2;
+  font-weight: 500;
+  padding: 10px;
+  transition: top 0.3s ease-in-out;
+}
+
+.input__email:focus ~ .label__email, .input__email:valid ~ .label__email  {
+  padding: 10px 10px 55px 10px;
+  font-size: 10px;
+}
+
+.input__senha:focus ~ .label__senha,.input__senha:valid ~ .label__senha {
+  padding: 10px 10px 50px 10px;
+  font-size: 10px;
 }
 
 .formulario__login button {
