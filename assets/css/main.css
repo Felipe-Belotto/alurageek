@@ -166,6 +166,20 @@ aside {
   overflow: hidden;
 }
 
+/* Tablet e notebook */
+
+@media screen and (min-width: 550px) and (max-width: 1440px) {
+  .produtos {
+    width: calc(100% - 32px);
+  }
+
+  .contatos .container {
+    width: calc(100% - 64px);
+  }
+}
+
+/* Tela para celular */
+
 @media screen and (max-width: 550px) {
   main {
     gap: 0;

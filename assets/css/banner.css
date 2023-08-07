@@ -48,36 +48,47 @@
   cursor: pointer;
 }
 
+@media screen and (min-width: 550px) and (max-width: 1440px) {
+  .section__banner .container {
+    padding: 32px 0;
+  }
+
+  .banner__conteudo {
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .banner__conteudo {
-  width: 100%;
-  height: 100%;
-  padding: 16px;
-  justify-content: end;
-}
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    justify-content: end;
+  }
 
-.section__banner {
-  height: 192px;
-}
+  .section__banner {
+    height: 192px;
+  }
 
-.section__banner .container{
-  display: flex;
-  align-items: start;
-}
+  .section__banner .container {
+    display: flex;
+    align-items: start;
+  }
 
-.section__banner h1 {
-  font-size: 22px;
-  font-weight: bold;
-}
+  .section__banner h1 {
+    font-size: 22px;
+    font-weight: bold;
+  }
 
-.section__banner p {
-  font-size: 14px;
-}
+  .section__banner p {
+    font-size: 14px;
+  }
 
-.section__banner button {
-  width: calc(159px - 32px);
-  height: calc(70px - 24px);
-  padding: 12px 16px;
-  font-size: 14px;
-}
+  .section__banner button {
+    width: calc(159px - 32px);
+    height: calc(70px - 24px);
+    padding: 12px 16px;
+    font-size: 14px;
+  }
 }

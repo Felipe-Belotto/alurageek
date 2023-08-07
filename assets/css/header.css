@@ -80,7 +80,7 @@ header .container {
 /* Fim Input Pesquisa */
 
 .botao__login {
-  width: 180px;
+  min-width: 180px;
   height: 100%;
   border: 1px #2a7ae4 solid;
   color: #2a7ae4;
@@ -92,6 +92,35 @@ header .container {
   display: none;
 }
 
+/* Tela para tablet */
+
+@media screen and (min-width: 550px) and (max-width: 1440px) {
+  header .container {
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .pesquisa__container {
+    width: 100%;
+    flex-shrink: 1;
+  }
+
+  .input__Pesquisa {
+    width: calc(100% + 250px);
+    flex-shrink: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .botao__login {
+    max-width: 160px;
+    margin: 0 32px 0 64px;
+  }
+}
+
+/* Tela para celular */
+
 @media screen and (max-width: 550px) {
   header {
     padding: 18px 0;
@@ -100,6 +129,7 @@ header .container {
   header .container {
     width: 100%;
     justify-content: space-around;
+    padding: 0 10px;
   }
 
   .header__img {
@@ -122,9 +152,4 @@ header .container {
     flex-shrink: 1;
     margin: 6px;
   }
-
-  .botao__pesquisa {
-    margin: 0 12px 0 6px;
-  }
-
 }
