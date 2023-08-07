@@ -20,7 +20,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 24.65px;
+  padding: 50px 0;
+  gap: 24px;
 }
 
 .formulario__login h1 {
@@ -31,7 +32,7 @@ main {
   font-weight: 700;
 }
 
-.input__container{
+.input__container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,7 +46,7 @@ main {
   color: #a2a2a2;
   font-family: Raleway;
   font-weight: 400;
-  padding:12px;
+  padding: 12px;
   border-radius: 4px;
 }
 
@@ -56,15 +57,16 @@ main {
   color: #a2a2a2;
   font-weight: 500;
   padding: 10px;
- 
 }
 
-.input__email:focus ~ .label__email, .input__email:valid ~ .label__email  {
+.input__email:focus ~ .label__email,
+.input__email:valid ~ .label__email {
   padding: 10px 10px 50px 10px;
   font-size: 10px;
 }
 
-.input__senha:focus ~ .label__senha,.input__senha:valid ~ .label__senha {
+.input__senha:focus ~ .label__senha,
+.input__senha:valid ~ .label__senha {
   padding: 10px 10px 50px 10px;
   font-size: 10px;
 }
@@ -86,7 +88,6 @@ main {
 }
 
 @media screen and (max-width: 550px) {
-
   main {
     gap: 0;
     max-width: 100vw;
@@ -98,10 +99,11 @@ main {
     padding: 150px 0;
   }
 
-  .formulario__login{
+  .formulario__login {
     width: 80%;
     gap: 20px;
     min-width: 0;
+    padding: 0;
   }
 
   .formulario__login h1 {
@@ -109,7 +111,7 @@ main {
     font-weight: 700;
   }
 
-  .formulario__login  .input__container input {
+  .formulario__login .input__container input {
     width: calc(100% - 24px);
     height: 30px;
   }
