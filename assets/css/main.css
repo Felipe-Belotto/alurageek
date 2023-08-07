@@ -170,124 +170,120 @@ aside {
   main {
     gap: 0;
   }
-  
+
   .produtos {
-  width: 100%;
-  gap: 0;
-}
+    width: 100%;
+    gap: 0;
+  }
 
-.titulo__container {
- padding: 16px 16px 4px 16px;
-}
+  .titulo__container {
+    padding: 16px 16px 4px 16px;
+  }
 
-.titulo__lista {
-  color: var(--preto-100, #464646);
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-}
+  .titulo__lista {
+    color: var(--preto-100, #464646);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+  }
 
-.titulo__container button {
-  font-size: 14px;
-  padding: 16px;
-}
+  .titulo__container button {
+    font-size: 14px;
+    padding: 16px;
+  }
 
-.lista__produtos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 12px;
-  padding: 0 0 10px 0;
-  height: 550px;
-}
+  .lista__produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12px;
+    padding: 0 0 10px 0;
+    height: 550px;
+  }
 
-/* Contatos */
+  /* Contatos */
 
-.contatos {
-  width: 100%;
-  margin: 20px 0 0 0;
-  
-}
+  .contatos {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 
-.contatos .container {
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  padding: 16px 0;
-  gap: 16px;
-}
+  .contatos .container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 16px 0;
+    gap: 16px;
+  }
 
-.contatos__logo {
-  display: flex;
-  align-self: center;
-}
+  .contatos__logo {
+    display: flex;
+    align-self: center;
+  }
 
-.contatos__itens {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 16px
-}
+  .contatos__itens {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 16px;
+  }
 
+  .contatos form {
+    width: 100%;
+  }
 
-.contatos form {
-  width: 100%;
-}
+  .contatos__email {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 24px;
+  }
 
-.contatos__email {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 8px;
-  padding: 10px 24px;
-}
+  .contatos__email h3 {
+    align-self: flex-start;
+    color: var(--preto-100, #464646);
+    font-size: 16px;
+    font-weight: 700;
+  }
 
-.contatos__email h3 {
-  align-self: flex-start;
-  color: var(--preto-100, #464646);
-  font-size: 16px;
-  font-weight: 700;
-}
+  .contatos__email .nome__email {
+    width: 96%;
+    padding: 8px;
+  }
 
-.contatos__email .nome__email {
-  width: 96%;
-  padding: 8px;
-}
+  .contatos__email textarea {
+    width: 96%;
+    padding: 8px;
+  }
 
-.contatos__email textarea {
-  width: 96%;
-  padding: 8px;
-}
+  .contatos__email button {
+    align-self: flex-start;
+  }
 
-.contatos__email button {
-  align-self: flex-start;
-}
+  aside {
+    width: 100%;
+  }
 
-aside{
-  width: 100%;
-}
+  .produto__simulares {
+    width: 100%;
+    height: 600px;
+    padding: 25px 0 25px 0;
+  }
 
-.produto__simulares{
-  width: 100%;
-  height: 600px;
-  padding: 25px 0 25px 0 ;
-}
+  .produto__simulares h1 {
+    font-size: 22px;
+    padding: 0 16px;
+  }
 
-.produto__simulares h1 {
-  font-size: 22px;
-  padding: 0 16px;
-}
-
-.produto__simulares ul {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-
+  .produto__simulares ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
