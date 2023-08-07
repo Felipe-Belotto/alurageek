@@ -40,6 +40,7 @@ async function exibeCardADM() {
       );
       if (confirmacao) {
         deletarProduto(card.id);
+        alert(`Produto ${element.name} deletado`);
       }
     });
 
@@ -58,6 +59,7 @@ async function exibeCardADM() {
 
       botaoAlteraProduto.addEventListener("click", () => {
         alteraProduto(card.id);
+        alert(`O produto [${element.name}] foi alterado`);
       });
     });
   });
