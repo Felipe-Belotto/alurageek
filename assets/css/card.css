@@ -179,7 +179,7 @@
   align-self: center;
   width:  auto;
   height: 100%;
-  max-width: 350px;
+  max-width: 80%;
   max-height: 400px
 }
 .cardSelecionado__informacoes{
