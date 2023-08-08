@@ -61,7 +61,22 @@
   background-color: rgba(0, 0, 0, 0.435);
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 875px) and (max-width: 1440px) {
+  
+  .produtos__editaveis {
+  width: 98%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0;
+}
+
+
+}
+
+
+@media screen and (max-width: 875px) {
 
   .produtos__editaveis {
   width: 100%;

@@ -189,6 +189,10 @@ aside {
   padding: 8px 12px;
 }
 
+aside {
+  width: 95%;
+}
+
 }
 
 /* Tela para celular */

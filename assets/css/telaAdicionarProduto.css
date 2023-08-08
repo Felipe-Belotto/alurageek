@@ -87,7 +87,17 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width:875px) and (max-width: 1440px) {
+  
+  .addProduto {
+  width: 100%;
+}
+
+
+
+}
+
+@media screen and (max-width: 875px) {
 
   main{
     overflow: hidden;
