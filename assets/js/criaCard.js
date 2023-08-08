@@ -26,7 +26,9 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
   preco = parseFloat(preco);
   const precoComDesconto = (preco - preco * 0.3).toFixed(2);
   cardSelecionado.innerHTML = `
-    <img class="cardSelecionado__imagem" src="${imagem}" alt="">
+    <div class="cardSelecionado__imagem__container">
+    <img class="cardSelecionado__imagem" src="${imagem}" alt="${nome} imagem">
+    </div>
     <div class="cardSelecionado__informacoes">
     <p class="cardSelecionado__nome">${nome}</p>
     <div class="cardSelecionado__precos">
@@ -34,7 +36,10 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
     <p class="cardSelecionado__preco">Por R$ ${precoComDesconto}</p>
     </div>
     <p class="cardSelecionado__descricao">${descricao}</p>
+    <button class="cardSelecionado__botao">Comprar</button>
     </div>
+
+   
   `;
 
   return cardSelecionado;

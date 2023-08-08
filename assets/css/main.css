@@ -175,12 +175,25 @@ aside {
 
   .contatos .container {
     width: calc(100% - 64px);
+    justify-content: space-around;
   }
+
+  .contatos__email .nome__email {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.contatos__email textarea{
+  width: 100%;
+  padding: 8px 12px;
+}
+
 }
 
 /* Tela para celular */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 875px) {
   main {
     gap: 0;
   }
@@ -252,7 +265,7 @@ aside {
 
   .contatos__email {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
     gap: 8px;
     padding: 10px 24px;
