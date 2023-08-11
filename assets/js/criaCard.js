@@ -23,6 +23,7 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
   const cardSelecionado = document.createElement("li");
   cardSelecionado.className = "cardSelecionado";
   cardSelecionado.id = id;
+  localStorage.setItem("nomeDoProduto", nome);
   preco = parseFloat(preco);
   const precoComDesconto = (preco - preco * 0.3).toFixed(2);
   cardSelecionado.innerHTML = `
@@ -42,8 +43,20 @@ function criarCardSelecionado(imagem, nome, preco, descricao, id) {
    
   `;
 
+  const botaoComprar = cardSelecionado.querySelector(".cardSelecionado__botao");
+
+  botaoComprar.addEventListener("click", Comprar);
+
   return cardSelecionado;
 }
+
+const Comprar = () => {
+  alert(
+    `Efetuando compra do produto ${localStorage.getItem(
+      "nomeDoProduto"
+    )} ... \n \n ( brincadeira, o site é apenas uma demonstração de habilidade )`
+  );
+};
 
 function criarCardPesquisado(imagem, nome, preco, id) {
   const cardPesquisado = document.createElement("li");
