@@ -182,26 +182,26 @@
     max-height: 400px;
   }
   .cardSelecionado__informacoes {
-    align-items: center;
+    align-items: start;
+    padding: 0 16px;
   }
 
   .cardSelecionado__nome {
     color: var(--preto-100, #464646);
     font-size: 22px;
     font-weight: 500;
-    padding: 0 16px;
   }
 
   .cardSelecionado__precos {
-    gap: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .cardSelecionado__preco-antigo {
-    padding: 0 0 0 16px;
   }
 
   .cardSelecionado__descricao {
     font-size: 14px;
-    padding: 0 16px;
   }
 }
