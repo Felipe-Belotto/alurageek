@@ -204,4 +204,8 @@
   .cardSelecionado__descricao {
     font-size: 14px;
   }
+
+  .cardSelecionado__botao {
+    width: 100%;
+  }
 }
