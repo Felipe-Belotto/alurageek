@@ -108,6 +108,11 @@
   padding: 16px 0;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 5 px 2px #ccc;
+}
+
+.cardSelecionado__botao:active {
+ transform: scale(0.98);
 }
 
 /* Card Pesquisado */
@@ -182,6 +187,7 @@
     max-height: 400px;
   }
   .cardSelecionado__informacoes {
+    width: 80%;
     align-items: start;
     padding: 0 16px;
   }
