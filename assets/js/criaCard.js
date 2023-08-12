@@ -54,7 +54,7 @@ const Comprar = () => {
   alert(
     `Efetuando compra do produto ${localStorage.getItem(
       "nomeDoProduto"
-    )} ... \n \n ( brincadeira, o site é apenas uma demonstração de habilidade )`
+    )} ... \n \n ( brincadeira, esse site é apenas um projeto para agregar ao meu portifólio )`
   );
 };
 
