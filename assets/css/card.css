@@ -108,11 +108,13 @@
   padding: 16px 0;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 0 5 px 2px #ccc;
+  font-weight: 500;
+  box-shadow: 0 0 5px 2px #a9a9a9;
 }
 
 .cardSelecionado__botao:active {
- transform: scale(0.98);
+ background-color: #3681e2;
+ transform: scale(0.985);
 }
 
 /* Card Pesquisado */
@@ -187,7 +189,8 @@
     max-height: 400px;
   }
   .cardSelecionado__informacoes {
-    width: 80%;
+    width: 90%;
+    max-width: 500px;
     align-items: start;
     padding: 0 16px;
   }
@@ -204,8 +207,8 @@
     gap: 4px;
   }
 
-  .cardSelecionado__preco-antigo {
-  }
+/*   .cardSelecionado__preco-antigo {
+  } */
 
   .cardSelecionado__descricao {
     font-size: 14px;
@@ -213,5 +216,6 @@
 
   .cardSelecionado__botao {
     width: 100%;
+    
   }
 }
