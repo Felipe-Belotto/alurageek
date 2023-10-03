@@ -1,6 +1,6 @@
 # Desafio AluraGeek - Minha Versão
 
-[![Visite a site](https://a.imagem.app/ohOXY3.png)](https://alurageek-nu.vercel.app/)
+[![Visite a site](https://a.imagem.app/ohONbP.png)](https://alurageek-nu.vercel.app/)
 Clique na miniatura para visitar o site
 
 Este é o resultado da minha versão do desafio AluraGeek do programa ONE da Alura. O AluraGeek é um site que simula um ecommerce com uma variedade de produtos. O site proporciona a capacidade de adicionar novos produtos, realizar login como administrador, além das opções de remover e editar produtos já existentes. Toda essa funcionalidade é implementada utilizando HTML, CSS e JavaScript.
