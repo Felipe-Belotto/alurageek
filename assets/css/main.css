@@ -46,6 +46,15 @@ main {
   gap: 34px;
 }
 
+.botao-ativo {
+  opacity: 0.8;
+}
+
+.invertido{
+  transform: rotate(180deg);
+}
+
+
 /* Sessão CONTATO */
 
 .contatos {

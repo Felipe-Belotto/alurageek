@@ -1,4 +1,29 @@
 function verTudoListas() {
+  function ativarDesativarLista(botao, lista) {
+    const verTudoAtivo = lista.style.height === "100%";
+
+    if (verTudoAtivo) {
+      botao.innerHTML = `Ver mais <img src="assets/img/seta.svg" alt="icone ver tudo">`;
+      botao.classList.remove('botao-ativo'); // Remova a classe de botão ativo
+
+      if (window.innerWidth < 550) {
+        lista.style.height = "550px";
+        console.log("tela de celular");
+      }
+
+      if (window.innerWidth > 550) {
+        lista.style.flexWrap = "nowrap";
+        lista.style.height = "auto";
+        console.log("tela de computador");
+      }
+    } else {
+      lista.style.flexWrap = "wrap";
+      lista.style.height = "100%";
+      botao.innerHTML = `Ver menos <img src="assets/img/seta.svg" class="invertido" alt="icone ver tudo">`;
+      botao.classList.add('botao-ativo'); 
+    }
+  }
+
   const botaoVtStarWars = document.getElementById("btnVerTudoStarWars");
   const listaStarWars = document.getElementById("listaStarWars");
 
@@ -9,72 +34,15 @@ function verTudoListas() {
   const listaDiversos = document.getElementById("listaDiversos");
 
   botaoVtStarWars.addEventListener("click", () => {
-    const verTudoAtivo = listaStarWars.style.height === "100%";
-
-    if (verTudoAtivo) {
-      botaoVtStarWars.innerHTML = `Ver mais <img src="assets/img/seta.svg" alt="icone ver tudo">`;
-
-      if (window.innerWidth < 550) {
-        listaStarWars.style.height = "550px";
-        console.log("tela de celular");
-      }
-
-      if (window.innerWidth > 550) {
-        listaStarWars.style.flexWrap = "nowrap";
-        listaStarWars.style.height = "auto";
-        console.log("tela de computador");
-      }
-    } else {
-      listaStarWars.style.flexWrap = "wrap";
-      listaStarWars.style.height = "100%";
-      botaoVtStarWars.innerHTML = `Ver menos <img src="assets/img/seta.svg" alt="icone ver tudo">`;
-    }
+    ativarDesativarLista(botaoVtStarWars, listaStarWars);
   });
 
   botaoVtConsoles.addEventListener("click", () => {
-    const verTudoAtivo = listaConsoles.style.height === "100%";
-
-    if (verTudoAtivo) {
-      botaoVtConsoles.innerHTML = `Ver mais <img src="assets/img/seta.svg" alt="icone ver tudo">`;
-
-      if (window.innerWidth < 550) {
-        listaConsoles.style.height = "550px";
-        console.log("tela de celular");
-      }
-
-      if (window.innerWidth > 550) {
-        listaConsoles.style.flexWrap = "nowrap";
-        listaConsoles.style.height = "auto";
-        console.log("tela de computador");
-      }
-    } else {
-      listaConsoles.style.flexWrap = "wrap";
-      listaConsoles.style.height = "100%";
-      botaoVtConsoles.innerHTML = `Ver menos <img src="assets/img/seta.svg" alt="icone ver tudo">`;
-    }
+    ativarDesativarLista(botaoVtConsoles, listaConsoles);
   });
 
   botaoVtDiversos.addEventListener("click", () => {
-    const verTudoAtivo = listaDiversos.style.height === "100%";
-
-    if (verTudoAtivo) {
-      botaoVtDiversos.innerHTML = `Ver mais <img src="assets/img/seta.svg" alt="icone ver tudo">`;
-
-      if (window.innerWidth < 550) {
-        listaDiversos.style.height = "550px";
-        console.log("tela de celular");
-      }
-
-      if (window.innerWidth > 550) {
-        listaDiversos.style.flexWrap = "nowrap";
-        listaDiversos.style.height = "auto";
-        console.log("tela de computador");
-      }
-    } else {
-      listaDiversos.style.flexWrap = "wrap";
-      listaDiversos.style.height = "100%";
-      botaoVtDiversos.innerHTML = `Ver menos <img src="assets/img/seta.svg" alt="icone ver tudo">`;
-    }
+    ativarDesativarLista(botaoVtDiversos, listaDiversos);
   });
 }
 
